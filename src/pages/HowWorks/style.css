@@ -1,0 +1,20 @@
+.container-how-works{
+    height: 85vh;
+    background-color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.image-how-works img{
+    width: 400px;
+}
+
+.text-area-works{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

@@ -1,0 +1,22 @@
+.container-work{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.image-work img{
+    width: 100px;
+}
+
+.text-area-work h1{
+    color: var(--green);
+}
+
+.text-area-work p{
+    margin-top: 10px;
+    padding-left: 20px;
+    font-family: var(--Avenir);
+    line-height: 25px;
+}
