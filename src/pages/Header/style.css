@@ -1,0 +1,57 @@
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.253);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0 50px;
+    height: 80px;
+}
+
+.logo-header {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.options-header ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.buttons-header {
+    display: flex;
+    gap: 20px;
+}
+
+.sign-up-button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: .2s;
+    
+    &:hover {
+        background-color: var(--yellow);
+        color: black;
+        transform: scale(1.1);
+    }
+}
+
+.get-started-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: .2s;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+}
