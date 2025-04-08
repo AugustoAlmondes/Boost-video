@@ -18,6 +18,7 @@ export default function Header() {
                 <button className='sign-up-button'>Sign up</button>
                 <button className='get-started-button'>Get Started</button>
             </div>
+            
         </div>
         </>
     );

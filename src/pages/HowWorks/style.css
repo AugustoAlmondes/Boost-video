@@ -1,6 +1,10 @@
 .container-how-works{
-    height: 80vh;
-    background-color: var(--white);
+    height: 100vh;
+    /* background-color: var(--white); */
+    background-image: url('/img/background-white.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     display: flex;
     align-items: center;

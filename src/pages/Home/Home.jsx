@@ -61,6 +61,7 @@ function Home() {
             </div>
 
             <IoIosArrowDown className="arrow-down" />
+            <div className="fadeout"></div>
         </div>
     );
 }

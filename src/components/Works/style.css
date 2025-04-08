@@ -15,6 +15,10 @@
 }
 
 .text-area-work p{
+    text-align: justify;
+}
+
+.text-area-work p{
     margin-top: 10px;
     padding-left: 20px;
     font-family: var(--Avenir);
