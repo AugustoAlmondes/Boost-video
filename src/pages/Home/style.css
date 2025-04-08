@@ -32,6 +32,9 @@
     left: 150px;
 
     h1{
+        /* background: linear-gradient(90deg, rgb(59, 59, 59),rgb(0, 0, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
         min-width: 600px;
         /* font-size: 4.3vw; */
         font-size: clamp(2.5rem, 4.3vw, 4.5rem);
@@ -64,6 +67,46 @@
         border: none;
         background-color: black;
         color: white;
+        position: relative;
+        border-radius: 10px;
+        color: var(--white);
+        background-color: black;
+        font-family: roboto;
+        font-size: 15px;
+        font-weight: 100;
+        overflow: hidden;
+        padding: 1rem 2rem;
+        position: relative;
+        text-decoration: none;
+        transition: .2s transform ease-in-out;
+        will-change: transform;
+        z-index: 0;
+
+        /* &::after {
+            background-color: rgb(241, 241, 241);
+            border-radius: 10px;
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(-100%, 0);
+            transform-origin: top left;
+            transition: .2s transform ease-out;
+            will-change: transform;
+            z-index: -1;
+        }
+
+        &:hover::after {
+            transform: translate(0, 0);
+        }
+
+        &:hover {
+            color: black;
+            will-change: transform;
+        } */
     }
 
     .watch-demo-button button{
