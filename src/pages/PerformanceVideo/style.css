@@ -1,7 +1,7 @@
 /* VideoBackground.css */
 .video-container {
     position: relative;
-    height: 100%;
+    height: 700px;
     overflow: hidden;
 }
 
@@ -33,10 +33,14 @@
     z-index: 1;
     /* text-align: center; */
     padding-top: 15vh;
-    padding-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h1,
     p {
+        text-align: center;
         background: linear-gradient(90deg, rgb(255, 255, 255), var(--blue));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -56,7 +60,7 @@
     }
 
     ul {
-        margin: 30px 0 0 20px;
+        margin: 30px 0 0 60px;
 
         li {
             list-style: none;

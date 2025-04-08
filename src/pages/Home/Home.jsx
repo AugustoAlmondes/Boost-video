@@ -16,7 +16,7 @@ function Home() {
             setCurrentIndex((prevIndex) =>
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
             );
-        }, 5000); // muda a cada 5 segundos
+        }, 7000); // muda a cada 7 segundos
 
         return () => clearInterval(interval);
     }, []);

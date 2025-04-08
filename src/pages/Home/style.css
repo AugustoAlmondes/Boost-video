@@ -16,7 +16,7 @@
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 5s ease-in-out;
+    transition: opacity 4s ease-in-out;
 }
 
 .fade-image.active {
@@ -38,7 +38,7 @@
         min-width: 600px;
         /* font-size: 4.3vw; */
         font-size: clamp(2.5rem, 4.3vw, 4.5rem);
-        font-family: var(--Canvas);
+        font-family: var(--Proxima);
     }
 
     p{

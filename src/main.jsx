@@ -5,14 +5,14 @@ import Header from './pages/Header/Header'
 import Home from './pages/Home/Home'
 import './main.css'
 import HowWorks from './pages/HowWorks/HowWorks'
-import Performance from './pages/Performance/Performance'
+import PerformanceVideo from './pages/PerformanceVideo/PerformanceVideo'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Home/>
     <Header />
     <HowWorks/>
-    <Performance/>
+    <PerformanceVideo/>
 
   </StrictMode>,
 )
