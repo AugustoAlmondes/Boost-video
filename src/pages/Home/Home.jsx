@@ -1,12 +1,19 @@
 import './style.css';
 import { IoIosArrowDown } from "react-icons/io";
 import { useState, useEffect } from 'react';
+import { motion as MOTION} from 'framer-motion';
 
 const images = [
     '/img/home3.png',
     '/img/home2.png',
     '/img/home4.png',
-    '/img/home5.png'];
+    '/img/home5.png'
+];
+
+const fadeVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+};
 
 function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,15 +23,20 @@ function Home() {
             setCurrentIndex((prevIndex) =>
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
             );
-        }, 7000); // muda a cada 7 segundos
+        }, 7000);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
         <div className="container-home">
-
-            <div className="text-area">
+            <MOTION.div
+                className="text-area"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeVariants}
+            >
                 <h1>Create <br />
                     High-Performance <br />
                     Ads with AI</h1>
@@ -34,20 +46,19 @@ function Home() {
                 </p>
 
                 <div className="buttons-home">
-                    <div className="try-for-free-button">
+                    <MOTION.div className="try-for-free-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <button>
                             Try For Free
                         </button>
-                    </div>
+                    </MOTION.div>
 
-                    <div className="watch-demo-button">
+                    <MOTION.div className="watch-demo-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <button>
                             Watch Demo
                         </button>
-                    </div>
+                    </MOTION.div>
                 </div>
-            </div>
-
+            </MOTION.div>
 
             <div className="image-container">
                 {images.map((image, index) => (
@@ -59,9 +70,15 @@ function Home() {
                     />
                 ))}
             </div>
+            <div className="image-overlay"></div>
 
-            <IoIosArrowDown className="arrow-down" />
-            <div className="fadeout"></div>
+            <MOTION.div
+                className="arrow-down"
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+            >
+                <IoIosArrowDown size={40} />
+            </MOTION.div>
         </div>
     );
 }

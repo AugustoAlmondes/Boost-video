@@ -1,37 +1,42 @@
-.image-container {
+.container-home {
     position: relative;
     width: 100%;
-    /* height: calc(100vh - 80px); */
     height: 100vh;
-    background-color: black;
-    /* ou o tamanho que desejar */
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background-color: black;
 }
-
-.fade-image {
+.image-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 4s ease-in-out;
+    background: rgba(0, 0, 0, 0.2); /* controla a opacidade aqui */
+    z-index: 1;
 }
 
-.fadeout{
+.image-container {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 400px;
-    /* altura do fade */
-    background: linear-gradient(to bottom,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.2) 30%,
-            rgba(255, 255, 255, 0.534) 60%,
-            #ffffff 100%);
-    z-index: 1;
-    
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.fade-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .fade-image.active {
@@ -39,126 +44,123 @@
     z-index: 1;
 }
 
-.text-area{
-    cursor: default;
-    position: absolute;
+.text-area {
+    position: relative;
     z-index: 2;
-    top: 30%;
-    left: 150px;
-
-    h1{
-        /* background: linear-gradient(90deg, rgb(59, 59, 59),rgb(0, 0, 0));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
-        min-width: 600px;
-        /* font-size: 4.3vw; */
-        font-size: clamp(2.5rem, 4.3vw, 4.5rem);
-        font-family: var(--Proxima);
-    }
-
-    p{
-        margin-top: 10px;
-        width: 500px;
-        font-size: clamp(1.6rem, 1.2vw, 1.8rem);
-        font-family: var(--Avenir);
-        text-align: justify;
-    }
+    max-width: 600px;
+    color: #fff;
+    padding-top: 10vh;
 }
 
-.buttons-home{
-    margin-top: 20px;
+.text-area h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-family: var(--Proxima);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.text-area p {
+    font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+    font-family: var(--Avenir);
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 30px;
+    color: #e2e2e2;
+}
+
+.buttons-home {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-
-    button{
-        width: 200px;
-        height: 45px;
-        border-radius: 10px;
-        font-size: 15px;
-        cursor: pointer;
-    }
-
-    .try-for-free-button button{
-        border: none;
-        background-color: black;
-        color: white;
-        position: relative;
-        border-radius: 10px;
-        color: var(--white);
-        background-color: black;
-        font-family: roboto;
-        font-size: 15px;
-        font-weight: 100;
-        overflow: hidden;
-        padding: 1rem 2rem;
-        position: relative;
-        text-decoration: none;
-        transition: .2s transform ease-in-out;
-        will-change: transform;
-        z-index: 0;
-
-        /* &::after {
-            background-color: rgb(241, 241, 241);
-            border-radius: 10px;
-            content: '';
-            display: block;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            transform: translate(-100%, 0);
-            transform-origin: top left;
-            transition: .2s transform ease-out;
-            will-change: transform;
-            z-index: -1;
-        }
-
-        &:hover::after {
-            transform: translate(0, 0);
-        }
-
-        &:hover {
-            color: black;
-            will-change: transform;
-        } */
-    }
-
-    .watch-demo-button button{
-        border: 2px solid black;
-        background-color: transparent;
-        color: black;
-        font-weight: bold;
-    }
 }
 
-.arrow-down{
-    position: absolute;
-    z-index: 2;
-    bottom: 5px;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    opacity: 0.5;
+.buttons-home button {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.try-for-free-button button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+}
+
+.try-for-free-button button:hover {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+}
+
+.watch-demo-button button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.watch-demo-button button:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrow-down {
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    left: 50%;
     transform: translateX(-50%);
-    transition: .2s ease-in-out;
-    animation: up-and-down 1s infinite ease-in-out;
-    animation-duration: 3s;
+    color: white;
+    opacity: 0.6;
+    font-size: 2rem;
+    animation: blink 2.5s infinite;
 }
 
-.arrow-down:hover{
+.arrow-down:hover {
     opacity: 1;
+    transform: translateX(-50%) scale(1.1);
 }
 
-@keyframes up-and-down{
-    0%{
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.2;
         transform: translateY(0);
     }
-    50%{
-        transform: translateY(-20px);
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
     }
-    100%{
-        transform: translateY(0);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .container-home {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 20px;
+    }
+
+    .text-area {
+        padding-top: 80px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .text-area h1 {
+        font-size: 2.5rem;
+        min-width: unset;
+    }
+
+    .text-area p {
+        width: 100%;
+    }
+
+    .buttons-home {
+        justify-content: center;
     }
 }

@@ -7,14 +7,16 @@ import './main.css'
 import HowWorks from './pages/HowWorks/HowWorks'
 import PerformanceVideo from './pages/PerformanceVideo/PerformanceVideo'
 import Testimony from './pages/Testimony/Testimony'
+import Footer from './pages/Footer/Footer'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Home/>
-    <Header />
+    <Header/>
     <HowWorks/>
     <PerformanceVideo/>
     <Testimony/>
+    <Footer/>
 
   </StrictMode>,
 )

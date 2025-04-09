@@ -1,0 +1,135 @@
+.footer-description {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    opacity: 0.85;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    min-width: 160px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    opacity: 0.85;
+}
+
+.footer-column a:hover {
+    /* color: var(--green); */
+    opacity: 1;
+    cursor: pointer;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials svg:hover,
+.footer-socials a:hover
+{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+}
+
+.footer {
+    animation: colorCycle 20s ease-in-out infinite;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    transition: background-color 7s ease-in-out;
+}
+
+/* Animação do ciclo de cores */
+@keyframes colorCycle {
+    0% {
+        background-color: var(--darkblue);
+    }
+    25% {
+        background-color: var(--darkyellow);
+    }
+    50% {
+        background-color: var(--darkred);
+    }
+    75% {
+        background-color: var(--darkgreen);
+    }
+    100% {
+        background-color:var(--darkblue);
+    }
+}
+.footer h2{
+    font-size: 30px;
+}
+
+.footer h2,
+.footer h3 {
+    animation: textColorCycle 20s ease-in-out infinite;
+    transition: color 7s ease-in-out;
+}
+
+@keyframes textColorCycle {
+    0% {
+        color: var(--blue);
+    }
+    25% {
+        color: var(--yellow);
+    }
+    50% {
+        color: var(--red);
+    }
+    75% {
+        color: var(--green);
+    }
+    100% {
+        color: var(--blue);
+    }
+}

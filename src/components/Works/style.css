@@ -1,26 +1,57 @@
-.container-work{
+.work-card {
     display: flex;
+    align-items: flex-start;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.image-work img{
-    width: 100px;
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
 }
 
-.text-area-work h1{
-    color: var(--green);
+.work-icon img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
 }
 
-.text-area-work p{
+.work-text h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.work-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
     text-align: justify;
 }
 
-.text-area-work p{
-    margin-top: 10px;
-    padding-left: 20px;
-    font-family: var(--Avenir);
-    line-height: 25px;
+/* Responsivo */
+@media (max-width: 768px) {
+    .work-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .work-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .work-text h3 {
+        font-size: 18px;
+    }
+
+    .work-text p {
+        font-size: 14px;
+    }
 }
