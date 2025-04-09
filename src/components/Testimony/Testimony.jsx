@@ -1,6 +1,6 @@
-import './style.css';
-import AnimatedBackground from '../../components/AnimatedBackground/AnimatedBackground';
-import { motion as MOTION} from 'framer-motion';
+import './testimony.css';
+import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
+import { motion as MOTION } from 'framer-motion';
 
 export default function Testimony() {
     const depoimentos = [

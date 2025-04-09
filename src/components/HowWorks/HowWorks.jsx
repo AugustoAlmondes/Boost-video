@@ -5,7 +5,7 @@ import HowWorksImage from '/howworks/works.png';
 import UploadImageWork from '/howworks/upload.png';
 import PredictionImageWork from '/howworks/prediction.png';
 import AnalysisImageWork from '/howworks/analysis.png';
-import Work from '../../components/Works/Work';
+import Work from '../Works/Work';
 
 const workItems = [
     {

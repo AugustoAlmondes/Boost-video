@@ -1,6 +1,8 @@
-import './style.css';
+import useHeaderShrink from '../../hook/useHeaderShrink';
+import './header.css';
 
 export default function Header() {
+    useHeaderShrink('.container-header', 30);
     return (
         <>
         <div className="container-header">

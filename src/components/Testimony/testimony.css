@@ -2,7 +2,7 @@
     /* background: linear-gradient(to bottom, #f5f5f5, #ffffff); */
     background-color: transparent;
     padding: 80px 20px;
-    height: 80vh;
+    min-height: 80vh;
     text-align: center;
 }
 

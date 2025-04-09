@@ -1,3 +1,11 @@
+.footer {
+    animation: colorCycle 20s ease-in-out infinite;
+    color: white;
+    padding-top: 60px;
+    text-align: center;
+    transition: background-color 7s ease-in-out;
+}
+
 .footer-description {
     font-size: 16px;
     max-width: 500px;
@@ -65,6 +73,8 @@
     opacity: 0.6;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 15px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.212);
 }
 
 /* Responsivo */
@@ -78,14 +88,6 @@
     .footer-column {
         align-items: center;
     }
-}
-
-.footer {
-    animation: colorCycle 20s ease-in-out infinite;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    transition: background-color 7s ease-in-out;
 }
 
 /* Animação do ciclo de cores */

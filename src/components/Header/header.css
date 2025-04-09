@@ -10,20 +10,28 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 100; 
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     animation: slideDown 0.6s ease-out;
+    transition: all .6s ease;
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.container-header.shrink {
+    height: 50px;
+    padding: 0 3vw;
+    backdrop-filter: blur(10px);
+    transition: all .6s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.container-header.shrink .logo-header {
+    font-size: 1.6rem;
+}
+
+.container-header.shrink .sign-up-button,
+.container-header.shrink .get-started-button {
+    padding: 8px 18px;
+    font-size: 0.85rem;
 }
 
 .logo-header {
@@ -109,4 +117,15 @@
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px) scale(1.05);
     cursor: pointer;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

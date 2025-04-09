@@ -1,6 +1,6 @@
-import './style.css';
+import './performance.css';
 import { FaCheck } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion as MOTION} from "framer-motion";
 
 export default function PerformanceVideo() {
     return (
@@ -18,7 +18,7 @@ export default function PerformanceVideo() {
                 </video>
                 <div className="video-overlay" />
 
-                <motion.div
+                <MOTION.div
                     className="overlay-content"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -31,32 +31,32 @@ export default function PerformanceVideo() {
                         performance across different platforms.
                     </p>
                     <ul>
-                        <motion.li
+                        <MOTION.li
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4 }}
                             viewport={{ once: true }}
                         >
                             <p><FaCheck /> Engagement rate prediction</p>
-                        </motion.li>
-                        <motion.li
+                        </MOTION.li>
+                        <MOTION.li
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.6 }}
                             viewport={{ once: true }}
                         >
                             <p><FaCheck /> Click-through rate analysis creative</p>
-                        </motion.li>
-                        <motion.li
+                        </MOTION.li>
+                        <MOTION.li
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.8 }}
                             viewport={{ once: true }}
                         >
                             <p><FaCheck /> Platform-specific optimization tips</p>
-                        </motion.li>
+                        </MOTION.li>
                     </ul>
-                </motion.div>
+                </MOTION.div>
 
                 <div className="video-fadeout" />
             </div>
@@ -72,13 +72,13 @@ export default function PerformanceVideo() {
                 <p>
                     Join thousands of creators and businesses using klike to improve their advertising results
                 </p>
-                <motion.button
+                <MOTION.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 300 }}
                 >
                     Start Free Trial
-                </motion.button>
+                </MOTION.button>
             </section>
         </>
     );

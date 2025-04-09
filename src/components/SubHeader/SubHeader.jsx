@@ -1,0 +1,84 @@
+import './subheader.css';
+import { IoIosArrowDown } from "react-icons/io";
+import { useState, useEffect } from 'react';
+import { motion as MOTION} from 'framer-motion';
+
+const images = [
+    '/img/home3.png',
+    '/img/home2.png',
+    '/img/home4.png',
+    '/img/home5.png'
+];
+
+const fadeVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+};
+
+export default function SubHeader() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) =>
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 7000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <div className="container-home">
+            <MOTION.div
+                className="text-area"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeVariants}
+            >
+                <h1>Create <br />
+                    High-Performance <br />
+                    Ads with AI</h1>
+
+                <p>
+                    Optimize your social media advertising with AI-powered creative analysis and performance prediction
+                </p>
+
+                <div className="buttons-home">
+                    <MOTION.div className="try-for-free-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <button>
+                            Try For Free
+                        </button>
+                    </MOTION.div>
+
+                    <MOTION.div className="watch-demo-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <button>
+                            Watch Demo
+                        </button>
+                    </MOTION.div>
+                </div>
+            </MOTION.div>
+
+            <div className="image-container">
+                {images.map((image, index) => (
+                    <img
+                        key={index}
+                        src={image}
+                        className={`fade-image ${index === currentIndex ? 'active' : ''}`}
+                        alt={`slide-${index}`}
+                    />
+                ))}
+            </div>
+            <div className="image-overlay"></div>
+
+            <MOTION.div
+                className="arrow-down"
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+            >
+                <IoIosArrowDown size={40} />
+            </MOTION.div>
+        </div>
+    );
+}
