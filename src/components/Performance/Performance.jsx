@@ -63,10 +63,10 @@ export default function PerformanceVideo() {
 
             <section
                 className="container-redy-optimize"
-                // initial={{ opacity: 0, y: 50 }}
-                // whileInView={{ opacity: 1, y: 0 }}
-                // transition={{ duration: 0.7 }}
-                // viewport={{ once: true, amount: 0.4 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true, amount: 0.4 }}
             >
                 <h2>Ready to Optimize Your Ad Performance?</h2>
                 <p>

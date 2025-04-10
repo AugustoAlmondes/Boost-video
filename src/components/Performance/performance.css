@@ -138,13 +138,29 @@
 }
 
 @media (max-width: 768px) {
+
     .overlay-content h1 {
         font-size: 32px;
         width: 90%;
     }
 
+    .container-redy-optimize {
+        min-height: max-content;
+        border-top: 1px solid rgb(0, 0, 0);
+
+        & h2 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        & p {
+            font-size: 20px;
+            margin: 0 20px;
+        }
+    }
+
     .overlay-content p {
-        font-size: 18px;
+        font-size: 20px;
         width: 90%;
     }
 
@@ -153,6 +169,6 @@
     }
 
     .overlay-content ul li p {
-        font-size: 16px;
+        font-size: 18px;
     }
 }

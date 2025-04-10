@@ -1,4 +1,4 @@
-import './style.css';
+import './work.css';
 
 export default function Work({ imageLink, title, color, description }) {
     return (

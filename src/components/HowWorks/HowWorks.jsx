@@ -1,4 +1,4 @@
-import './style.css';
+import './howworks.css';
 import { motion as MOTION } from 'framer-motion';
 
 import HowWorksImage from '/howworks/works.png';
@@ -33,12 +33,12 @@ const workItems = [
 
 export default function HowWorks() {
     return (
-        <MOTION.section
+        <section
             className="how-works-section"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
+            // initial={{ opacity: 0, y: 50 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.8, ease: "easeOut" }}
+            // viewport={{ once: true, amount: 0.2 }}
         >
             <div className="how-works-wrapper">
                 <MOTION.div
@@ -46,22 +46,24 @@ export default function HowWorks() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.7, delay: 0.2 }}
+                    viewport={{ once: true }}
                 >
                     <img src={HowWorksImage} alt="Illustration showing how it works" />
                 </MOTION.div>
 
                 <MOTION.div
                     className="how-works-content"
-                    initial={{ opacity: 0, x: 80 }}
+                    initial={{ opacity: 0, x: 0 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
+                    viewport={{ once: true }}
                 >
                     <div className="work-items">
                         {workItems.map((item, index) => (
                             <MOTION.div
                                 key={index}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, y: 40}}
+                                whileInView={{ opacity: 1, y: 0}}
                                 transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
                                 viewport={{ once: true }}
                             >
@@ -76,6 +78,6 @@ export default function HowWorks() {
                     </div>
                 </MOTION.div>
             </div>
-        </MOTION.section>
+        </section>
     );
 }
