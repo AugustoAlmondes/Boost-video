@@ -10,7 +10,6 @@ import './home.css';
 export default function Home() {
     return (
         <div className="home-container">
-            <Header />
             <SubHeader />
             <HowWorks />
             <Performance />
