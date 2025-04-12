@@ -6,34 +6,55 @@ import PropTypes from 'prop-types';
 
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
 import { styled } from '@mui/material/styles';
+import { keyframes } from '@mui/system';
+
+const fillFromRight = keyframes`
+  from {
+    width: 0%;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+`;
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
     [`&.${stepConnectorClasses.alternativeLabel}`]: {
         top: 22,
     },
-    [`&.${stepConnectorClasses.active}`]: {
-        [`& .${stepConnectorClasses.line}`]: {
-            backgroundColor: '#43a047',
+    [`&.${stepConnectorClasses.active} .${stepConnectorClasses.line}`]: {
+        position: 'relative',
+        backgroundColor: 'transparent',
+
+        '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            height: '100%',
+            width: '100%',
+            background: 'linear-gradient(to right, var(--green),#5f8c23)',
+            borderRadius: 1,
+            animation: `${fillFromRight} 0.5s ease-out forwards`,
         },
     },
-    [`&.${stepConnectorClasses.completed}`]: {
-        [`& .${stepConnectorClasses.line}`]: {
-            backgroundColor: '#2e7d32',
-        },
+    [`&.${stepConnectorClasses.completed} .${stepConnectorClasses.line}`]: {
+        backgroundColor: 'var(--green)',
     },
     [`& .${stepConnectorClasses.line}`]: {
         height: 3,
         border: 0,
         backgroundColor: '#eaeaf0',
         borderRadius: 1,
-        ...theme.applyStyles('dark', {
+        ...theme.applyStyles?.('dark', {
             backgroundColor: theme.palette.grey[800],
         }),
     },
 }));
 
 const ColorlibStepIconRoot = styled('div')(({ ownerState }) => ({
-    backgroundColor: '#ccc',
+    backgroundColor: 'var(--lightred)',
     zIndex: 1,
     color: '#fff',
     width: 50,
@@ -46,11 +67,11 @@ const ColorlibStepIconRoot = styled('div')(({ ownerState }) => ({
     transition: 'all 0.3s ease-in-out',
     ...(ownerState.active && {
         backgroundColor: '#43a047',
-        transform: 'scale(1.1)',
+        transform: 'scale(1.2)',
         boxShadow: '0 4px 10px rgba(0,0,0,.3)',
     }),
     ...(ownerState.completed && {
-        backgroundColor: '#2e7d32',
+        backgroundColor: 'var(--green)',
         transform: 'scale(1.05)',
         boxShadow: '0 4px 10px rgba(0,0,0,.2)',
     }),

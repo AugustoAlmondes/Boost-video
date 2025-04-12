@@ -1,12 +1,15 @@
 import AnimatedBackground from '../../components/AnimatedBackground/AnimatedBackground';
-import './adsflow.css';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import { useState } from 'react';
-import UploadFileIcon from '@mui/icons-material/UploadFile';        // Para "Upload"
-import TextFieldsIcon from '@mui/icons-material/TextFields';         // Para "Context"
-import InsightsIcon from '@mui/icons-material/Insights';             // Para "Analysis"
-import LightbulbIcon from '@mui/icons-material/Lightbulb';           // Para "Suggestions"
-import DescriptionIcon from '@mui/icons-material/Description';       // Para "Report"
+import UploadFileIcon from '@mui/icons-material/UploadFile';
+import TextFieldsIcon from '@mui/icons-material/TextFields';
+import InsightsIcon from '@mui/icons-material/Insights';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import DescriptionIcon from '@mui/icons-material/Description';
+import './adsflow.css';
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
+import StepUpload from '../../components/StepsAdsFlow/StepUpload/StepUpload';
+
 
 const steps = [
     'Upload',
@@ -24,6 +27,23 @@ const stepIcons = {
     5: <DescriptionIcon />
 };
 
+function getStepContent(step) {
+    switch (step) {
+        case 0:
+            return <StepUpload />;
+        case 1:
+            return <div>Context</div>;
+        case 2:
+            return <div>Analysis</div>;
+        case 3:
+            return <div>Suggestions</div>;
+        case 4:
+            return <div>Report</div>;
+        default:
+            return <div>Unknown step</div>;
+    }
+}
+
 
 export default function AdsFlow() {
     const [currentStep, setCurrentStep] = useState(0);
@@ -35,20 +55,20 @@ export default function AdsFlow() {
                         <ProgressBar listSteps={steps} currentStep={currentStep} listIcons={stepIcons} />
                     </div>
 
-                    <div className="container-content-ads-flow">
-                        teste
+                    <div className="container-step">
+                        {getStepContent(currentStep)}
                     </div>
-                    <button
-                        onClick={() => {
-                            setCurrentStep(currentStep + 1);
-                            console.log(currentStep);
-                        }}
-                    >Click</button>
-                    <button
-                        onClick={() => {
-                            setCurrentStep(0);
-                        }}
-                    >Reset</button>
+
+                    <div className="buttons-next-back">
+                    <button className="back-button" style={currentStep === 0 ? { opacity: 0, pointerEvents: 'none' } : {}}
+                            onClick={() => setCurrentStep((prevStep) => prevStep - 1)}
+                        > <FaLongArrowAltLeft size={20} /> Back</button>
+
+                        <button className="next-button"
+                            onClick={() => setCurrentStep((prevStep) => prevStep + 1)}
+                        >Continue to Context  <FaLongArrowAltRight size={20} />
+                        </button>
+                    </div>
                 </div>
                 <AnimatedBackground />
             </div>

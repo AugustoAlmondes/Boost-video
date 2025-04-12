@@ -1,0 +1,54 @@
+.container-brand-assets {
+    width: 80%;
+    border: 2px solid rgb(189, 189, 189);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    min-width: 300px;
+
+    & h3 {
+        font-size: 25px;
+        font-weight: 600;
+        color: rgb(90, 90, 90);
+    }
+}
+
+.brand-assets-upload div {
+    display: flex;
+    align-items: center;
+}
+
+/* REMOVIDO o hover interativo */
+/* .brand-assets-upload {
+} */
+
+.brand-assets-icon {
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: var(--lightblue);
+    border-radius: 6px;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.brand-assets-button {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    height: 40px;
+    width: 150px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.brand-assets-button:hover {
+    background-color: var(--darkblue);
+    cursor: pointer;
+}
