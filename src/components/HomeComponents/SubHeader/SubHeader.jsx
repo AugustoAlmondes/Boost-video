@@ -1,14 +1,31 @@
 import './subheader.css';
+import '../../../index.css';
 import { IoIosArrowDown } from "react-icons/io";
 import { useState, useEffect } from 'react';
-import { motion as MOTION} from 'framer-motion';
+import { motion as MOTION } from 'framer-motion';
+
+// const images = [
+//     '/img/home3.png',
+//     '/img/home2.png',
+//     '/img/home4.png',
+//     '/img/home5.png'
+// ];
 
 const images = [
-    '/img/home3.png',
     '/img/home2.png',
-    '/img/home4.png',
-    '/img/home5.png'
+    '/img/home2.1.png',
+    '/img/home2.2.png',
+    '/img/home2.4.png'
 ];
+
+
+const currentColor = [
+    'yellow',
+    'blue',
+    'red',
+    'green'
+]
+
 
 const fadeVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -37,24 +54,51 @@ export default function SubHeader() {
                 viewport={{ once: true }}
                 variants={fadeVariants}
             >
-                <h1>Create <br />
-                    High-Performance <br />
-                    Ads with AI</h1>
+                <h1>
+                    Build High-Impact <br />
+                    <span
+                        style={{
+                            background: `linear-gradient(to right, var(--light${currentColor[currentIndex]}), var(--${currentColor[currentIndex]}))`,
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            transition: '1s ease-in-out'
+                        }}
+
+                    >Ads</span> in Seconds <br />
+
+                    <span 
+                    style={{
+                        background: `linear-gradient(to right, var(--light${currentColor[currentIndex]}), var(--${currentColor[currentIndex]}))`,
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                    }}
+                    >with AI</span>
+                </h1>
 
                 <p>
-                    Optimize your social media advertising with AI-powered creative analysis and performance prediction
+                    Unlock the full potential of your social media campaigns with AI-driven creative insights and performance prediction for smarter, more effective advertising.Z
                 </p>
 
-                <div className="buttons-home">
-                    <MOTION.div className="try-for-free-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <button>
-                            Try For Free
-                        </button>
-                    </MOTION.div>
+                <span className="pro-version-text"
+                    style={{
+                        background: `linear-gradient(to right, white 60%, var(--light${currentColor[currentIndex]}))`,
+                        transition: '1s ease-in-out'
+                    }}
+                >
+                    Use the PRO version for the best performance
+                </span>
 
+                <div className="buttons-home">
+                    <span>Get start</span>
                     <MOTION.div className="watch-demo-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <button>
                             Watch Demo
+                        </button>
+                    </MOTION.div>
+                    <span>or</span>
+                    <MOTION.div className="try-for-free-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <button>
+                            Try For Free
                         </button>
                     </MOTION.div>
                 </div>

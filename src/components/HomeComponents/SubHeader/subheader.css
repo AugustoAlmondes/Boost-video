@@ -1,6 +1,29 @@
 .container-home {
     position: relative;
     width: 100%;
+    height: 130vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    /* background-color: black; */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* OLD */
+/* .container-home {
+    position: relative;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -9,7 +32,8 @@
     padding: 0 5%;
     box-sizing: border-box;
     background-color: black;
-}
+} */
+/* 
 .image-overlay {
     position: absolute;
     top: 0;
@@ -18,7 +42,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 1;
-}
+} */
 
 .image-container {
     position: absolute;
@@ -45,68 +69,114 @@
 }
 
 .text-area {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
     max-width: 600px;
     color: var(--white);
-    padding-top: 10vh;
 }
 
-.text-area h1 {
+/* OLD */
+/* .text-area h1 {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-family: var(--Proxima);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 20px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+} */
+
+.text-area h1 {
+    width: max-content;
+    font-size: clamp(2.5rem, 5vw, 5vw);
+    font-family: Proxima Nova Extrabold, var(--Proxima), sans-serif;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+    /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); */
+
+    & span {
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        color: transparent;
+        transition: 1s ease-in-out !important;
+    }
+}
+
+
+.pro-version-text {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    color: black;
+    padding: 5px 35px;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
 }
 
 .text-area p {
     font-size: clamp(1.2rem, 1.5vw, 1.6rem);
     font-family: var(--Avenir);
     line-height: 1.5;
-    text-align: justify;
+    text-align: center;
     margin-bottom: 30px;
-    color: var(--white);
+    color: black;
 }
 
 .buttons-home {
+    color: black;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+
+    & span {
+        font-family: var(--Avenir);
+        font-weight: 100;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 }
 
 .buttons-home button {
     padding: 12px 24px;
-    border-radius: 10px;
+    border-radius: 15px;
+    width: 400px;
+    height: 50px;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--Avenir);
 }
 
 .try-for-free-button button {
-    background-color: white;
+
+    background: transparent;
     color: black;
-    border: none;
+    border: 2px solid black;
     font-weight: bold;
 }
 
 .try-for-free-button button:hover {
-    transform: scale(1.05);
-    background-color: #f1f1f1;
+    transform: scale(1.01);
+    color: white;
+    background-color: black;
 }
 
 .watch-demo-button button {
-    background: transparent;
     color: white;
-    border: 2px solid white;
+    background-color: black;
+    border: none;
     font-weight: bold;
 }
 
 .watch-demo-button button:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+    /* background-color: rgba(255, 255, 255, 0.1); */
 }
 
 .arrow-down {
@@ -126,10 +196,13 @@
 }
 
 @keyframes blink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.2;
         transform: translateY(0);
     }
+
     50% {
         opacity: 1;
         transform: translateY(-10px);
@@ -167,7 +240,7 @@
         display: flex;
         flex-direction: column;
 
-        & button{
+        & button {
             width: 100%;
         }
     }
