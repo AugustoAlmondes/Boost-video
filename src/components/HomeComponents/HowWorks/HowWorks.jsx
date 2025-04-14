@@ -5,7 +5,7 @@ import HowWorksImage from '/howworks/works.png';
 import UploadImageWork from '/howworks/upload.png';
 import PredictionImageWork from '/howworks/prediction.png';
 import AnalysisImageWork from '/howworks/analysis.png';
-import Work from '../Works/Work';
+import Work from '../../Works/Work';
 
 const workItems = [
     {
@@ -35,10 +35,10 @@ export default function HowWorks() {
     return (
         <section
             className="how-works-section"
-            // initial={{ opacity: 0, y: 50 }}
-            // whileInView={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.8, ease: "easeOut" }}
-            // viewport={{ once: true, amount: 0.2 }}
+        // initial={{ opacity: 0, y: 50 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 0.8, ease: "easeOut" }}
+        // viewport={{ once: true, amount: 0.2 }}
         >
             <div className="how-works-wrapper">
                 <MOTION.div
@@ -62,8 +62,8 @@ export default function HowWorks() {
                         {workItems.map((item, index) => (
                             <MOTION.div
                                 key={index}
-                                initial={{ opacity: 0, y: 40}}
-                                whileInView={{ opacity: 1, y: 0}}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.3 + index * 0.2 }}
                                 viewport={{ once: true }}
                             >
@@ -78,6 +78,7 @@ export default function HowWorks() {
                     </div>
                 </MOTION.div>
             </div>
+
         </section>
     );
 }

@@ -1,9 +1,6 @@
 .how-works-section {
     padding: 100px 20px;
-    background-image: url('/img/background-white.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(to top, white, var(--white));
 }
 
 .how-works-wrapper {

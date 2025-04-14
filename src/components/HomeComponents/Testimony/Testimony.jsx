@@ -1,25 +1,25 @@
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import './testimony.css';
-import AnimatedBackground from '../AnimatedBackground/AnimatedBackground';
 import { motion as MOTION } from 'framer-motion';
 
 export default function Testimony() {
     const depoimentos = [
         {
             nome: "Mariana Costa",
-            cargo: "CMO - Agência Criativa",
-            texto: "A análise de performance da plataforma nos ajudou a triplicar nosso engajamento em campanhas. Recomendo fortemente!",
+            cargo: "CMO - Creative agency",
+            texto: "The platform's performance analysis helped us triple our campaign engagement. I recommend strongly!",
             imagem: "/img/fernanda.jpeg"
         },
         {
             nome: "Carlos Silva",
             cargo: "Growth Hacker - StartupX",
-            texto: "Ver o desempenho antes de lançar a campanha nos fez economizar tempo e dinheiro. Ferramenta indispensável.",
+            texto: "Seeing performance before launching the campaign made us save time and money. Indispensable tool.",
             imagem: "/img/carlos.jpeg"
         },
         {
             nome: "Fernanda Lima",
             cargo: "Social Media - MarcaZ",
-            texto: "A interface é intuitiva e os insights são poderosos. Melhor investimento em mídia que fizemos esse ano!",
+            texto: "The interface is intuitive and insights are powerful. Best media investment we made this year!",
             imagem: "/img/mariana.jpeg"
         }
     ];
@@ -53,8 +53,11 @@ export default function Testimony() {
                         </MOTION.div>
                     ))}
                 </div>
+                <div className="use-cases-cta">
+                    <h3>Start now creating ads that really work</h3>
+                    <button>Test for free </button>
+                </div>
             </section>
-            <AnimatedBackground />
         </>
     );
 }

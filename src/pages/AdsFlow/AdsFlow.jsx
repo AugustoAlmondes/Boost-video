@@ -70,7 +70,6 @@ export default function AdsFlow() {
                         </button>
                     </div>
                 </div>
-                <AnimatedBackground />
             </div>
         </>
     );

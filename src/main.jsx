@@ -9,7 +9,7 @@ import Header from './components/Header/Header'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Header />
-    {/* <Home/> */}
-    <AdsFlow />
+    <Home/>
+    {/* <AdsFlow /> */}
   </StrictMode>,
 )
