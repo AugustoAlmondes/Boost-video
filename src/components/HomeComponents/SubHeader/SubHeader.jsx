@@ -76,13 +76,14 @@ export default function SubHeader() {
                 </h1>
 
                 <p>
-                    Unlock the full potential of your social media campaigns with AI-driven creative insights and performance prediction for smarter, more effective advertising.Z
+                    Unlock the full potential of your social media campaigns with AI-driven creative insights and performance prediction for smarter, more effective advertising.
                 </p>
 
                 <span className="pro-version-text"
                     style={{
-                        background: `linear-gradient(to right, white 60%, var(--light${currentColor[currentIndex]}))`,
-                        transition: '1s ease-in-out'
+                        background: `linear-gradient(to right, white 60%, var(--verylight${currentColor[currentIndex]}))`,
+                        transition: '1s ease-in-out',
+                        color: `var(--${currentColor[currentIndex]})`
                     }}
                 >
                     Use the PRO version for the best performance
