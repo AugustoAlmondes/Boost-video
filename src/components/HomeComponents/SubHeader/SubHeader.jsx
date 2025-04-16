@@ -12,10 +12,10 @@ import { motion as MOTION } from 'framer-motion';
 // ];
 
 const images = [
+    '/img/home3.2.png',
     '/img/home3.png',
     '/img/home3.1.png',
-    '/img/home3.2.png',
-    '/img/home3.3.png'
+    '/img/home3.3.png',
 ];
 
 

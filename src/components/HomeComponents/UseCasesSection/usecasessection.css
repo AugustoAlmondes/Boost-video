@@ -8,7 +8,7 @@
         margin-top: 50px;
         margin-bottom: 20px;
         font-family: var(--Proxima);
-        font-size: clamp(2rem, 3vw, 6rem);
+        font-size: clamp(2rem, 4vw, 6rem);
     }
 
     & .use-cases-subtitle {
