@@ -17,14 +17,14 @@ const workItems = [
     },
     {
         image: PredictionImageWork,
-        title: "Performance Prediction",
+        title: "Perfomance and Insights",
         color: "#F65655",
         description:
             "Have access to detailed performance forecasts before you even publish your ads. Our AI anticipates the results based on previous campaign data and standards, helping you make more strategic and assertive decisions.",
     },
     {
         image: AnalysisImageWork,
-        title: "AI Analysis",
+        title: "Creative Edits",
         color: "#648DCB",
         description:
             "Receive an instant and intelligent analysis of your creative piece. Our AI evaluates visual elements, messages, and impact to reveal what works — and what can be improved — in your campaigns.",

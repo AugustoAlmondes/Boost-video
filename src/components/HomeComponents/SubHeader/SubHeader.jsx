@@ -12,16 +12,16 @@ import { motion as MOTION } from 'framer-motion';
 // ];
 
 const images = [
-    '/img/home2.png',
-    '/img/home2.1.png',
-    '/img/home2.2.png',
-    '/img/home2.4.png'
+    '/img/home3.png',
+    '/img/home3.1.png',
+    '/img/home3.2.png',
+    '/img/home3.3.png'
 ];
 
 
 const currentColor = [
-    'yellow',
     'blue',
+    'yellow',
     'red',
     'green'
 ]
@@ -61,7 +61,6 @@ export default function SubHeader() {
                             background: `linear-gradient(to right, var(--light${currentColor[currentIndex]}), var(--${currentColor[currentIndex]}))`,
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
-                            transition: '1s ease-in-out'
                         }}
 
                     >Ads</span> in Seconds <br />
@@ -79,7 +78,7 @@ export default function SubHeader() {
                     Unlock the full potential of your social media campaigns with AI-driven creative insights and performance prediction for smarter, more effective advertising.
                 </p>
 
-                <span className="pro-version-text"
+                {/* <span className="pro-version-text"
                     style={{
                         background: `linear-gradient(to right, white 60%, var(--verylight${currentColor[currentIndex]}))`,
                         transition: '1s ease-in-out',
@@ -87,7 +86,7 @@ export default function SubHeader() {
                     }}
                 >
                     Use the PRO version for the best performance
-                </span>
+                </span> */}
 
                 <div className="buttons-home">
                     <span>Get start</span>

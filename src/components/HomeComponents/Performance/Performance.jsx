@@ -16,6 +16,7 @@ export default function PerformanceVideo() {
                     <source src="/videos/video.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos HTML5.
                 </video>
+                <div className="video-fadeout" />
                 <div className="video-overlay" />
 
                 <MOTION.div
@@ -57,8 +58,6 @@ export default function PerformanceVideo() {
                         </MOTION.li>
                     </ul>
                 </MOTION.div>
-
-                <div className="video-fadeout" />
             </div>
 
             <section
@@ -68,6 +67,7 @@ export default function PerformanceVideo() {
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true, amount: 0.4 }}
             >
+                
                 <h2>Ready to Optimize Your Ad Performance?</h2>
                 <p>
                     Join thousands of creators and businesses using klike to improve their advertising results

@@ -12,9 +12,9 @@ export default function Home() {
     return (
         <div className="home-container">
             <SubHeader />
+            <UseCasesSection />
             <HowWorks />
             <Performance />
-            <UseCasesSection />
             <Testimony />
             <Footer />
         </div>
