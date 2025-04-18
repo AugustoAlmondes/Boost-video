@@ -5,11 +5,6 @@ import { motion as MOTION } from "framer-motion";
 import "../../../index.css";
 import "./creativeanalysis.css"; // CSS base para layout
 
-const performanceData = {
-    xAxis: [{ scaleType: "point", data: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"] }],
-    series: [{ data: [65, 80, 90, 75, 85, 70, 55, 60], label: "Performance", color: "#3b82f6" }],
-};
-
 
 const creativeElementsData = [
     { id: 0, value: 30, label: "Visual Appeal", color: "#3b82f6" },
