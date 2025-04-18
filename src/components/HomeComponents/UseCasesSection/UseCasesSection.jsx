@@ -8,12 +8,8 @@ import { FaUserAlt, FaChartLine, FaBullhorn, FaShoppingCart } from 'react-icons/
 
 export default function UseCasesSection() {
     return (
-        <MOTION.section
+        <section
             className="use-cases-section"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
         >
             <MOTION.h1
                 initial={{ opacity: 0 }}
@@ -97,6 +93,6 @@ export default function UseCasesSection() {
                     <p>Time Reduction in Creative Production</p>
                 </div>
             </MOTION.div>
-        </MOTION.section>
+        </section>
     );
 }

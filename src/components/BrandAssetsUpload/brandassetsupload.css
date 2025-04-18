@@ -1,12 +1,11 @@
 .container-brand-assets {
-    width: 80%;
-    border: 2px solid rgb(189, 189, 189);
+    width: 800px;
+    border: 2px solid rgb(226, 226, 226);
     padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     border-radius: 12px;
-    background-color: #f9f9f9;
     min-width: 300px;
 
     & h3 {

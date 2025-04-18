@@ -6,9 +6,12 @@ import TextFieldsIcon from '@mui/icons-material/TextFields';
 import InsightsIcon from '@mui/icons-material/Insights';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import DescriptionIcon from '@mui/icons-material/Description';
-import './adsflow.css';
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 import StepUpload from '../../components/StepsAdsFlow/StepUpload/StepUpload';
+import CampaignContext from '../../components/StepsAdsFlow/CampaignContext/CampaignContext';
+import Footer from '../../components/Footer/Footer';
+import './adsflow.css';
+import CreativeAnalysis from '../../components/StepsAdsFlow/CreativeAnalysis/CreativeAnalysis';
 
 
 const steps = [
@@ -29,12 +32,12 @@ const stepIcons = {
 
 function getStepContent(step) {
     switch (step) {
-        case 0:
+        case 2:
             return <StepUpload />;
         case 1:
-            return <div>Context</div>;
-        case 2:
-            return <div>Analysis</div>;
+            return <CampaignContext />;
+        case 0:
+            return <CreativeAnalysis />;
         case 3:
             return <div>Suggestions</div>;
         case 4:
@@ -44,15 +47,20 @@ function getStepContent(step) {
     }
 }
 
+function upScreenTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 
 export default function AdsFlow() {
     const [currentStep, setCurrentStep] = useState(0);
+    const [direction, setDirection] = useState(1); // 1 para Next e 0 para Back
     return (
         <>
             <div className="container-ads-flow">
                 <div className='ads-flow-box'>
                     <div className="container-progress-bar">
-                        <ProgressBar listSteps={steps} currentStep={currentStep} listIcons={stepIcons} />
+                        <ProgressBar listSteps={steps} currentStep={currentStep} listIcons={stepIcons} direction={direction} />
                     </div>
 
                     <div className="container-step">
@@ -60,17 +68,27 @@ export default function AdsFlow() {
                     </div>
 
                     <div className="buttons-next-back">
-                    <button className="back-button" style={currentStep === 0 ? { opacity: 0, pointerEvents: 'none' } : {}}
-                            onClick={() => setCurrentStep((prevStep) => prevStep - 1)}
+                        <button className="back-button" style={currentStep === 0 ? { opacity: 0, pointerEvents: 'none' } : {}}
+                            onClick={() => {
+                                setCurrentStep((prevStep) => prevStep - 1)
+                                setDirection(0)
+                                upScreenTop()
+                            }}
                         > <FaLongArrowAltLeft size={20} /> Back</button>
 
                         <button className="next-button"
-                            onClick={() => setCurrentStep((prevStep) => prevStep + 1)}
+                            onClick={() => {
+                                setCurrentStep((prevStep) => prevStep + 1)
+                                setDirection(1)
+                                upScreenTop()
+                            }}
                         >Continue to Context  <FaLongArrowAltRight size={20} />
                         </button>
                     </div>
                 </div>
             </div>
+            {/* <AnimatedBackground /> */}
+            <Footer/>
         </>
     );
 }

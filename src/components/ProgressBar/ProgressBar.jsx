@@ -19,14 +19,15 @@ const fillFromRight = keyframes`
   }
 `;
 
-const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
+const ColorlibConnector = styled(StepConnector, {
+    shouldForwardProp: (prop) => prop !== 'direction',
+})(({ theme, direction }) => ({
     [`&.${stepConnectorClasses.alternativeLabel}`]: {
         top: 22,
     },
     [`&.${stepConnectorClasses.active} .${stepConnectorClasses.line}`]: {
         position: 'relative',
         backgroundColor: 'transparent',
-
         '&::before': {
             content: '""',
             position: 'absolute',
@@ -36,7 +37,7 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
             width: '100%',
             background: 'linear-gradient(to right, var(--green),#5f8c23)',
             borderRadius: 1,
-            animation: `${fillFromRight} 0.5s ease-out forwards`,
+            animation: direction === 1 ? `${fillFromRight} 0.5s ease-out forwards` : 'none',
         },
     },
     [`&.${stepConnectorClasses.completed} .${stepConnectorClasses.line}`]: {
@@ -75,6 +76,11 @@ const ColorlibStepIconRoot = styled('div')(({ ownerState }) => ({
         transform: 'scale(1.05)',
         boxShadow: '0 4px 10px rgba(0,0,0,.2)',
     }),
+
+    '@media (max-width: 800px)': {
+        width: 35,
+        height: 35,
+    },
 }));
 
 function ColorlibStepIcon(props) {
@@ -95,13 +101,13 @@ ColorlibStepIcon.propTypes = {
     iconsList: PropTypes.object,
 };
 
-export default function ProgressBar({ listSteps, currentStep, listIcons }) {
+export default function ProgressBar({ listSteps, currentStep, listIcons, direction }) {
     return (
         <div className="container-progress-bar">
             <Stepper
                 alternativeLabel
                 activeStep={currentStep}
-                connector={<ColorlibConnector />}
+                connector={<ColorlibConnector direction={direction} />}
             >
                 {listSteps.map((label) => (
                     <Step key={label}>

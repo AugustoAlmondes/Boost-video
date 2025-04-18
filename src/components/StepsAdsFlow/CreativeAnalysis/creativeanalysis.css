@@ -1,0 +1,84 @@
+.creative-analysis-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.creative-analysis-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: #1f2937;
+}
+
+.creative-analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .creative-analysis-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    border-radius: 16px;
+    box-shadow: none;
+    background-color: #f9fafb;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #374151;
+
+    & h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+}
+
+.section-subtitle-description {
+    margin: 0;
+    font-size: 25px;
+    color: #4b5563;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.icon.blue {
+    color: var(--blue);
+}
+
+.icon.red {
+    color: var(--red);
+}
+
+.icon.green {
+    color: var(--green);
+}
+
+.icon.yellow {
+    color: var(--yellow);
+}
+
+.summary {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.gray-bg {
+    background-color: #f3f4f6;
+}

@@ -1,12 +1,16 @@
 /* VideoBackground.css */
 .video-container {
-    margin: 50px;
+    margin: 0 50px;
     margin-bottom: 0;
     border-radius: 50px 50px 0px 0px;
     position: relative;
     /* height: 100vh; */
     height: 700px;
     overflow: hidden;
+}
+
+.container-perfomance{
+    background-color: white;
 }
 
 .video-bg {
@@ -59,7 +63,7 @@
 }
 
 .container-redy-optimize {
-    margin: 50px;
+    margin: 0 50px;
     margin-top: 0;
     color: var(--white);
     height: 300px;
