@@ -1,0 +1,40 @@
+.card-performance{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border-radius: 10px;
+    width: 300px;
+    height: 130px;
+
+    transition: all 0.3s ease;
+
+    & h3{
+        font-size: 25px;
+        font-family: var(--Avenir);
+    }
+
+    & p{
+        font-family: var(--Avenir);
+    }
+
+    & svg{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    & .icon-card-performance{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%
+    }
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}

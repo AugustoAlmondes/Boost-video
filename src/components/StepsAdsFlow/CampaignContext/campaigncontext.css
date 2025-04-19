@@ -6,14 +6,39 @@
     font-weight: 200;
 }
 
-.container-campaign-objective.active{
+.container-campaign-objective.active {
     border-color: var(--blue);
+}
+
+.border_1 {
+    border: 2px solid;
+    border-image: linear-gradient(var(--lightblue), var(--lightred))2;
+    border-radius: 15px;
+}
+
+.border_2 {
+    border: 2px solid;
+    border-image: linear-gradient(var(--lightred), var(--lightgreen))2;
+    border-radius: 15px;
+}
+
+.border_3 {
+    border: 2px solid;
+    border-image: linear-gradient(var(--lightgreen), var(--lightyellow))2;
+    border-radius: 15px;
+}
+
+.border_4 {
+    border: 2px solid;
+    border-image: linear-gradient(var(--lightyellow), var(--lightblue))2;
+    border-radius: 15px;
 }
 
 .container-campaign-objective {
     /* background-color: #f9f9f9; */
-    border: 2px solid rgb(226, 226, 226);
-    border-radius: 10px;
+    /* border: linear-gradient(to top, var(--lightblue), var(--blue)); */
+    /* como por um gradiente em uma borda */
+    /* border-radius: 10px; */
     width: 800px;
     padding: 20px;
     transition: .1s;
@@ -60,7 +85,7 @@
     }
 }
 
-.gender-target-audience{
+.gender-target-audience {
     width: 350px;
 }
 
@@ -74,7 +99,7 @@
     /* align-items: center; */
     gap: 12px;
     /* background-color: #f9f9f9; */
-    border: 2px solid rgb(226, 226, 226);
+    /* border: 2px solid rgb(226, 226, 226); */
     padding: 16px;
     border-radius: 12px;
     transition: .2s;
@@ -88,7 +113,7 @@
     gap: 20px;
     align-items: center;
 
-    
+
 }
 
 h4 {
@@ -138,15 +163,16 @@ select {
     margin-top: 20px;
     width: 100%;
 }
-.area-input-value-proposition{
 
-    & textarea{
+.area-input-value-proposition {
+
+    & textarea {
         border: 2px solid rgb(226, 226, 226);
         border-radius: 10px;
         padding: 10px;
         height: 100px;
         font-size: 16px;
-        font-family: var(--Avenir); 
+        font-family: var(--Avenir);
         font-weight: 200;
         width: 100%;
         transition: .2s;

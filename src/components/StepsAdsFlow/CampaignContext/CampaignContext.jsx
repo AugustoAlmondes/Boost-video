@@ -25,7 +25,7 @@ export default function CampaignContext() {
             <div className="container-inputs-ads-flow">
                 <div className="input-area-ads-flw">
 
-                    <div className={selectedObjective ? "container-campaign-objective active" : "container-campaign-objective"}>
+                    <div className={selectedObjective ? "container-campaign-objective active border_1" : "container-campaign-objective border_1"}>
                         <h3 className="box-title">Campaign Objective</h3>
                         <ul>
                             <li
@@ -52,7 +52,7 @@ export default function CampaignContext() {
                         </ul>
                     </div>
 
-                    <div className="container-target-audience"
+                    <div className="container-target-audience border_2"
                     style={age != '' && gender != '' && location != '' ? { border: "2px solid var(--blue)" } : {}}
                     >
                         <h3 className="box-title">Target Audience</h3>
@@ -83,7 +83,7 @@ export default function CampaignContext() {
                         </div>
                     </div>
 
-                    <div className={selectedPlatform ? "container-campaign-objective active" : "container-campaign-objective"}>
+                    <div className={selectedPlatform ? "container-campaign-objective active border_3" : "container-campaign-objective border_3"}>
                         <h3 className="box-title">Platform Selection</h3>
                         <ul>
                             <li
@@ -131,7 +131,7 @@ export default function CampaignContext() {
                         </ul>
                     </div>
 
-                    <div className=" container-target-audience"
+                    <div className=" container-target-audience border_4"
                     style={industry != '' && valueProposition != '' ? { border: "2px solid var(--blue)" } : {}}
                     >
                         <h3 className="box-title">Industry</h3>

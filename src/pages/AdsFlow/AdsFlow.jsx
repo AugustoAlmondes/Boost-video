@@ -1,5 +1,5 @@
 import AnimatedBackground from '../../components/AnimatedBackground/AnimatedBackground';
-import ProgressBar from '../../components/ProgressBar/ProgressBar';
+import ProgressBar from '../../components/ProgressBarCreate/ProgressBarCreate';
 import { useState } from 'react';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
@@ -88,7 +88,7 @@ export default function AdsFlow() {
                 </div>
             </div>
             {/* <AnimatedBackground /> */}
-            <Footer/>
+            <Footer />
         </>
     );
 }

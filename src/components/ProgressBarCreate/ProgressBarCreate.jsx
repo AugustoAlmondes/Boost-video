@@ -1,6 +1,5 @@
-// ProgressBar.jsx
 import { Stepper, Step, StepLabel } from '@mui/material';
-import './progressbar.css';
+import './progressbarcreate.css';
 import '../../index.css';
 import PropTypes from 'prop-types';
 
@@ -101,7 +100,7 @@ ColorlibStepIcon.propTypes = {
     iconsList: PropTypes.object,
 };
 
-export default function ProgressBar({ listSteps, currentStep, listIcons, direction }) {
+export default function ProgressBarCreate({ listSteps, currentStep, listIcons, direction }) {
     return (
         <div className="container-progress-bar">
             <Stepper
@@ -124,7 +123,7 @@ export default function ProgressBar({ listSteps, currentStep, listIcons, directi
     );
 }
 
-ProgressBar.propTypes = {
+ProgressBarCreate.propTypes = {
     listSteps: PropTypes.array.isRequired,
     currentStep: PropTypes.number.isRequired,
     listIcons: PropTypes.object.isRequired,
