@@ -1,6 +1,7 @@
 .container-brand-assets {
     width: 800px;
-    border: 2px solid rgb(226, 226, 226);
+    border: 2px solid;
+    border-image: linear-gradient(to bottom, var(--lightred), var(--lightgreen)) 2;
     padding: 16px;
     display: flex;
     flex-direction: column;

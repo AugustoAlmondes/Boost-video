@@ -32,6 +32,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: var(--Proxima), sans-serif;
+  font-family: var(--Avenir), sans-serif;
+  list-style: none;
+  text-decoration: none;
   /* cursor: default; */
 }

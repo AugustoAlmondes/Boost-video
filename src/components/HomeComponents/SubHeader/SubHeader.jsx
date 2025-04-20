@@ -3,6 +3,7 @@ import '../../../index.css';
 import { IoIosArrowDown } from "react-icons/io";
 import { useState, useEffect } from 'react';
 import { motion as MOTION } from 'framer-motion';
+import {Link} from 'react-router-dom';
 
 // const images = [
 //     '/img/home3.png',
@@ -91,9 +92,11 @@ export default function SubHeader() {
                 <div className="buttons-home">
                     <span>Get start</span>
                     <MOTION.div className="watch-demo-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Link to="/adsflow">
                         <button>
                             Watch Demo
                         </button>
+                        </Link>
                     </MOTION.div>
                     <span>or</span>
                     <MOTION.div className="try-for-free-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

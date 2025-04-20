@@ -5,6 +5,7 @@
 
     border-radius: 10px;
     width: 300px;
+    border: 2px solid rgb(202, 202, 202);
     height: 130px;
 
     transition: all 0.3s ease;

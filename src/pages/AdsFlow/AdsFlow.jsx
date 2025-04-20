@@ -12,6 +12,7 @@ import CampaignContext from '../../components/StepsAdsFlow/CampaignContext/Campa
 import Footer from '../../components/Footer/Footer';
 import './adsflow.css';
 import CreativeAnalysis from '../../components/StepsAdsFlow/CreativeAnalysis/CreativeAnalysis';
+import NewCA from '../../components/StepsAdsFlow/NewCA/NewCA';
 
 
 const steps = [
@@ -32,12 +33,13 @@ const stepIcons = {
 
 function getStepContent(step) {
     switch (step) {
-        case 2:
+        case 0:
             return <StepUpload />;
         case 1:
             return <CampaignContext />;
-        case 0:
-            return <CreativeAnalysis />;
+        case 2:
+            // return <CreativeAnalysis />;
+            return <NewCA/>;
         case 3:
             return <div>Suggestions</div>;
         case 4:

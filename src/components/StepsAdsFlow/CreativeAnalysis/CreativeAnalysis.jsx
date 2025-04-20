@@ -7,8 +7,6 @@ import { LuMousePointerClick } from "react-icons/lu";
 import "../../../index.css";
 import "./creativeanalysis.css"; // CSS base para layout
 import CardPerformance from "../../CardPerformance/CardPerformance";
-import ProgressBarCreate from "../../ProgressBarCreate/ProgressBarCreate";
-import { ProgressBar } from "react-bootstrap";
 
 
 const creativeElementsData = [

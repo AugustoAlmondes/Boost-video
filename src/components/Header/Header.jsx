@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './header.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import useHeaderShrink from '../../hook/useHeaderShrink';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [menuAberto, setMenuAberto] = useState(false);
@@ -13,13 +14,27 @@ export default function Header() {
     return (
         <header className={`container-header ${menuAberto ? 'menu-aberto' : ''}`}>
 
+            <div className="logo-header exit">
+                <Link to="/home"
+                style={{color: 'white'}}
+                >klike</Link>
+                {/* klike */}
+            </div>
 
-            <div className="logo-header exit">klike</div>
             <div className={`menu-mobile-container ${menuAberto ? 'ativo' : ''}`}>
-
-                <div className="logo-header in">klike</div>
+                <div className="logo-header in">
+                    <Link to="/home"
+                    style={{color: 'white'}}
+                    >klike</Link></div>
                 <nav className="options-header">
                     <ul>
+                        <Link to="/home" onClick={handleFecharMenu}
+                        style={{color: 'white'}}
+                        >
+                            <li>
+                                Home
+                            </li>
+                        </Link>
                         <li onClick={handleFecharMenu}>Product</li>
                         <li onClick={handleFecharMenu}>Pricing</li>
                         <li onClick={handleFecharMenu}>Contact</li>

@@ -1,0 +1,168 @@
+.creative-analysis-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.creative-analysis-title {
+    font-family: 'Avenir', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--darkblue);
+}
+
+.label-card-progress label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+
+.creative-analysis-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* align-items: stretch; */
+}
+
+.card {
+    /* background: linear-gradient(135deg, #fefefe, #f4f7fa); */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06); */
+    border-radius: 20px;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+
+.section-title {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #374151;
+
+    & h3 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+.pie-chart-card {
+    background: linear-gradient(to bottom right, var(--lightblue), var(--blue));
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+}
+
+.section-subtitle-description {
+    margin: 0;
+    font-size: 25px;
+    font-family: var(--Avenir);
+    color: black;
+}
+
+.progress-group {
+    /* border: 2px solid var(--green); */
+    border: 2px solid rgb(202, 202, 202);
+    padding: 25px;
+    min-width: 400px;
+    border-radius: 12px;
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    progress {
+        width: 300px;
+    }
+
+    & p {
+        margin-top: 15px;
+        font-size: 20px;
+        color: rgb(143, 143, 143);
+    }
+
+    & .label-card-progress {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & h3 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        & label {
+            font-size: 20px;
+        }
+    }
+}
+
+.progress-group.exit {
+    margin-top: 20px;
+}
+
+.cards-performance-group {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analysis-summary {
+    border: 2px solid rgb(202, 202, 202);
+    padding: 25px;
+    min-width: 400px;
+    border-radius: 12px;
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.analysis-summary h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #1f2937;
+    /* text-gray-800 */
+    margin-bottom: 1rem;
+}
+
+.analysis-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.analysis-summary li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 18px;
+    color: #374151;
+    /* text-gray-700 */
+    margin-bottom: 0.75rem;
+}
+
+.analysis-summary li svg {
+    flex-shrink: 0;
+    width: 23px; 
+    height: 23px;
+}
+
+.analysis-summary .icon-success {
+    color: var(--green);
+}
+
+.analysis-summary .icon-info {
+    color: var(--blue);
+}

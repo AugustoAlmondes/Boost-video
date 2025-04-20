@@ -1,0 +1,42 @@
+.progress-bar {
+    appearance: none;
+    height: 12px;
+    width: 100%;
+    border-radius: 100px;
+
+    /* Chrome and Safari */
+    &::-webkit-progress-bar {
+
+        background: rgb(228, 228, 228);
+        border-radius: 100px;
+    }
+
+
+    &::-webkit-progress-value {
+        background: linear-gradient(to right, var(--lightblue), var(--blue));
+        /* background-color: var(--darkgreen); */
+        /* background-color: var(--green); */
+        /* background-color: black; */
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    /* Firefox */
+    &::-moz-progress-bar {
+        background: linear-gradient(to right, var(--lightblue), var(--blue));
+        /* background-color: var(--darkgreen); */
+        /* background-color: var(--green); */
+        /* background-color: black; */
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+}
+
+.label-progress-bar {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        font-size: 15px;
+    }
+}
