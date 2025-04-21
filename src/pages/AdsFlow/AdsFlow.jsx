@@ -13,6 +13,7 @@ import Footer from '../../components/Footer/Footer';
 import './adsflow.css';
 import CreativeAnalysis from '../../components/StepsAdsFlow/CreativeAnalysis/CreativeAnalysis';
 import NewCA from '../../components/StepsAdsFlow/NewCA/NewCA';
+import StepSuggestions from '../../components/StepsAdsFlow/StepSuggestions/StepSuggestions';
 
 
 const steps = [
@@ -41,7 +42,7 @@ function getStepContent(step) {
             // return <CreativeAnalysis />;
             return <NewCA/>;
         case 3:
-            return <div>Suggestions</div>;
+            return <StepSuggestions/>
         case 4:
             return <div>Report</div>;
         default:
@@ -72,19 +73,19 @@ export default function AdsFlow() {
                     <div className="buttons-next-back">
                         <button className="back-button" style={currentStep === 0 ? { opacity: 0, pointerEvents: 'none' } : {}}
                             onClick={() => {
+                                upScreenTop()
                                 setCurrentStep((prevStep) => prevStep - 1)
                                 setDirection(0)
-                                upScreenTop()
                             }}
                         > <FaLongArrowAltLeft size={20} /> Back</button>
 
                         <button className="next-button"
                             onClick={() => {
+                                upScreenTop()
                                 setCurrentStep((prevStep) => prevStep + 1)
                                 setDirection(1)
-                                upScreenTop()
                             }}
-                        >Continue to Context  <FaLongArrowAltRight size={20} />
+                        >Continue to {steps[currentStep + 1]}  <FaLongArrowAltRight size={20} />
                         </button>
                     </div>
                 </div>

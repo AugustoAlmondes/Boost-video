@@ -157,7 +157,7 @@ export default function CreativeAnalysis() {
                                             cornerRadius: 6,
                                         },
                                     ]}
-                                    height={250}
+                                    height={230}
                                 />
                             </CardContent>
                         </Card>
