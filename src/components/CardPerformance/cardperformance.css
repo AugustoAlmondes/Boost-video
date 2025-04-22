@@ -5,13 +5,13 @@
 
     border-radius: 10px;
     width: 300px;
-    border: 2px solid rgb(202, 202, 202);
+    border: 2px solid rgb(224, 224, 224);
     height: 130px;
 
     transition: all 0.3s ease;
 
     & h3{
-        font-size: 25px;
+        font-size: 30px;
         font-family: var(--Avenir);
     }
 

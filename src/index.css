@@ -27,6 +27,16 @@
   --darkgreen: #2a352a;
 
   --white: rgb(250, 250, 250);
+
+  --gradiente-10: #A2C1F0;
+  --gradiente-20: #91B1D8;
+  --gradiente-30: #809ECC;
+  --gradiente-40: #6F8CC0;
+  --gradiente-50: #5E79B4;
+  --gradiente-60: #4D66A8;
+  --gradiente-70: #3C539C;
+  --gradiente-80: #2B4090;
+  --gradiente-90: #1A2D84;
 }
 
 *{

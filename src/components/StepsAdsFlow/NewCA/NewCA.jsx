@@ -9,6 +9,8 @@ import "./newca.css"; // CSS base para layout
 import CardPerformance from "../../CardPerformance/CardPerformance";
 import ProgressBar from "../../ProgressBar/ProgressBar";
 import { IoIosInformationCircle } from "react-icons/io";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const performanceTimelineData = [
     { month: "Jan", value: 60 },
@@ -22,8 +24,8 @@ const performanceTimelineData = [
 const creativeElementsData = [
     { id: 0, value: 30, label: "Visual Appeal", color: "var(--yellow)" },
     { id: 2, value: 20, label: "Call-to-Action", color: "var(--meanyellow)" },
-    { id: 1, value: 25, label: "Messaging", color: "var(--lightyellow)" },
-    { id: 3, value: 25, label: "Engagement", color: "var(--darkyellow)" },
+    { id: 1, value: 25, label: "Messaging", color: "#b3a754" },
+    { id: 3, value: 25, label: "Engagement", color: "#dacc66" },
 ];
 
 const creativeElements = [
@@ -33,7 +35,29 @@ const creativeElements = [
     { label: "Engagement", value: 58 },
 ];
 
-export default function CreativeAnalysis() {
+export default function CreativeAnalysis({ loadGraph }) {
+
+    console.log(loadGraph);
+
+    const [displayValue, setDisplayValue] = useState(0);
+
+    useEffect(() => {
+        const targetValue = 87;
+        const duration = 3000;
+        const startTime = performance.now();
+
+        const animate = (currentTime) => {
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const currentVal = Math.floor(progress * targetValue);
+            setDisplayValue(currentVal);
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        };
+
+        requestAnimationFrame(animate);
+    }, []);
+
     return (
         <>
             <h1 className="creative-analysis-title">Creative Analysis</h1>
@@ -48,42 +72,47 @@ export default function CreativeAnalysis() {
 
                     <CardPerformance
                         icon={<IoTimeOutline />}
-                        title="12.4s"
+                        title={12.4}
+                        extension={"s"}
                         color="green"
                         description="Average View Time"
+                        animation={loadGraph}
                     />
 
                     <CardPerformance
                         icon={<LuMousePointerClick />}
-                        title="4.8%"
+                        title={4.8}
+                        extension={"%"}
                         color="green"
                         description="Click-Through Rate"
+                        animation={loadGraph}
                     />
 
 
                     <CardPerformance
                         icon={<FaChartPie />}
-                        title="2.3%"
+                        title={2.3}
+                        extension={"%"}
                         color="green"
                         description="Conversion Rate"
+                        animation={loadGraph}
                     />
                 </div>
 
                 <div className="creative-analysis-grid">
 
-                    <div className="progress-group ">
-
+                    <div className="progress-group">
                         <div>
-                            <div className="label-card-progress"
-                                style={{ marginBottom: '10px' }}
-                            >
+                            <div className="label-card-progress" style={{ marginBottom: '10px' }}>
                                 <label>Performance Score</label>
-                                <h3>87</h3>
+                                <h3>{displayValue}</h3>
                             </div>
-                            <progress className="progress-bar" value={87} max={100}>{87}%</progress>
+                            <progress className="progress-bar" value={displayValue} max={100}>
+                                {displayValue}%
+                            </progress>
                             <p>
                                 Your creative is performing better than
-                                87% of ads in your industry
+                                {` ${displayValue}% `}of ads in your industry
                             </p>
                         </div>
                     </div>
@@ -97,10 +126,20 @@ export default function CreativeAnalysis() {
                         </div>
                         <div>
 
-                            <ProgressBar label="Your Score" value={87} max={100} />
+                            <ProgressBar
+                                label="Your Score"
+                                value={87}
+                                max={100}
+                                animation={loadGraph}
+                            />
                         </div>
                         <div>
-                            <ProgressBar label="Industry Average" value={60} max={100} />
+                            <ProgressBar
+                                label="Industry Average"
+                                value={60}
+                                max={100}
+                                animation={loadGraph}
+                            />
                         </div>
                     </div>
                     <div className="progress-group" >
@@ -117,6 +156,7 @@ export default function CreativeAnalysis() {
                                     value={item.value}
                                     max={100}
                                     complement="%"
+                                    animation={loadGraph}
                                 />
                             </div>
                         ))}
@@ -134,6 +174,8 @@ export default function CreativeAnalysis() {
                                 justifyContent: "center",
                                 backgroundColor: "transparent !important",
                                 alignItems: "center",
+
+                                border: 'none !important',
                                 borderRadius: "0 !important",
                             }}
                         >
@@ -175,6 +217,10 @@ export default function CreativeAnalysis() {
                             flexDirection: "column",
                             justifyContent: "center",
                             alignItems: "center",
+                            /* padding: 1.5rem; */
+                            /* margin-bottom: 2rem; */
+                            border: 'none !important',
+                            padding: '1.5rem !important',
                         }}
                     >
                         <CardContent

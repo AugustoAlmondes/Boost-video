@@ -8,6 +8,20 @@
     background-color:white;
 }
 
+.gray-background{
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.subtitle-box {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
 .ads-flow-box {
     /* background-color: var(--white); */
     width: 80vw;

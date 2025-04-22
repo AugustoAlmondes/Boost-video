@@ -16,8 +16,6 @@ export default function CampaignContext() {
     const [industry, setIndustry] = useState("");
     const [valueProposition, setValueProposition] = useState("");
 
-    console.log(age != '' && gender != '' && location != '');
-
     return (
         <>
             <h1>Campaign Context</h1>
@@ -26,7 +24,7 @@ export default function CampaignContext() {
                 <div className="input-area-ads-flw">
 
                     <div className={selectedObjective ? "container-campaign-objective active border_1" : "container-campaign-objective border_1"}>
-                        <h3 className="box-title">Campaign Objective</h3>
+                        <h3 className="subtitle-box">Campaign Objective</h3>
                         <ul>
                             <li
                                 className={selectedObjective === "Sales" ? "active" : ""}
@@ -53,16 +51,16 @@ export default function CampaignContext() {
                     </div>
 
                     <div className="container-target-audience border_2"
-                    style={age != '' && gender != '' && location != '' ? { border: "2px solid var(--blue)" } : {}}
+                        style={age != '' && gender != '' && location != '' ? { border: "2px solid var(--blue)" } : {}}
                     >
-                        <h3 className="box-title">Target Audience</h3>
+                        <h3 className="subtitle-box">Target Audience</h3>
 
                         <div className="area-inputs-target-audience">
                             <div className="age-target-audience">
-                                <h4>Age</h4>
+                                <h4> Age</h4>
                                 <input type="number" id="age-range" name="age-range" max="100" min="0" placeholder="Enter age range"
-                                    onChange={(e) => {setAge(e.target.value)
-                                    console.log(age)
+                                    onChange={(e) => {
+                                        setAge(e.target.value)
                                     }}
                                 />
                             </div>
@@ -73,8 +71,8 @@ export default function CampaignContext() {
                             </div>
 
                             <div className="location-target-audience"
-                                onChange={(e) => {setLocation(e.target.value)
-                                console.log(location)
+                                onChange={(e) => {
+                                    setLocation(e.target.value)
                                 }}
                             >
                                 <h4>Location</h4>
@@ -84,7 +82,7 @@ export default function CampaignContext() {
                     </div>
 
                     <div className={selectedPlatform ? "container-campaign-objective active border_3" : "container-campaign-objective border_3"}>
-                        <h3 className="box-title">Platform Selection</h3>
+                        <h3 className="subtitle-box">Platform Selection</h3>
                         <ul>
                             <li
                                 className={selectedPlatform === "TikTok" ? "active" : ""}
@@ -132,23 +130,26 @@ export default function CampaignContext() {
                     </div>
 
                     <div className=" container-target-audience border_4"
-                    style={industry != '' && valueProposition != '' ? { border: "2px solid var(--blue)" } : {}}
+                        style={industry != '' && valueProposition != '' ? { border: "2px solid var(--blue)" } : {}}
                     >
-                        <h3 className="box-title">Industry</h3>
-                        <input type="text" className="input-type-industry" placeholder='Enter Industry' 
-                            onChange={(e) => {setIndustry(e.target.value)
-                                console.log(industry)
-                            }}
-                        />
+                        <h3 className="subtitle-box">Industry</h3>
 
-                        <div className="area-input-value-proposition">
-                            <h4>Value Proposition (What do you sell? Why you are unique?)</h4>
-                            <textarea name="value-proposition" id="value-proposition"
-                                placeholder='Describe your main product/service benefit (e.g., Best cost value shampoo for curly hair)'
-                                onChange={(e) => {setValueProposition(e.target.value)
-                                console.log(valueProposition)
+                        <div className='gray-background'>
+                            <input type="text" className="input-type-industry" placeholder='Enter Industry'
+                                onChange={(e) => {
+                                    setIndustry(e.target.value)
                                 }}
-                            ></textarea>
+                            />
+
+                            <div className="area-input-value-proposition">
+                                <h4>Value Proposition (What do you sell? Why you are unique?)</h4>
+                                <textarea name="value-proposition" id="value-proposition"
+                                    placeholder='Describe your main product/service benefit (e.g., Best cost value shampoo for curly hair)'
+                                    onChange={(e) => {
+                                        setValueProposition(e.target.value)
+                                    }}
+                                ></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>

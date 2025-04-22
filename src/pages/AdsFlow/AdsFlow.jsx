@@ -14,6 +14,7 @@ import './adsflow.css';
 import CreativeAnalysis from '../../components/StepsAdsFlow/CreativeAnalysis/CreativeAnalysis';
 import NewCA from '../../components/StepsAdsFlow/NewCA/NewCA';
 import StepSuggestions from '../../components/StepsAdsFlow/StepSuggestions/StepSuggestions';
+import FinalReport from '../../components/StepsAdsFlow/NewCA/FinalReport/FinalReport';
 
 
 const steps = [
@@ -32,7 +33,7 @@ const stepIcons = {
     5: <DescriptionIcon />
 };
 
-function getStepContent(step) {
+function getStepContent(step, loadGraph=false) {
     switch (step) {
         case 0:
             return <StepUpload />;
@@ -40,11 +41,12 @@ function getStepContent(step) {
             return <CampaignContext />;
         case 2:
             // return <CreativeAnalysis />;
-            return <NewCA/>;
+            return <NewCA loadGraph={loadGraph} />;
         case 3:
-            return <StepSuggestions/>
+            return <StepSuggestions />
         case 4:
-            return <div>Report</div>;
+            // return <div>Report</div>;
+            return <FinalReport />
         default:
             return <div>Unknown step</div>;
     }
@@ -58,6 +60,10 @@ function upScreenTop() {
 export default function AdsFlow() {
     const [currentStep, setCurrentStep] = useState(0);
     const [direction, setDirection] = useState(1); // 1 para Next e 0 para Back
+    const [loadGraph, setLoadGraph] = useState(false);
+
+    console.log("estado",loadGraph);
+    
     return (
         <>
             <div className="container-ads-flow">
@@ -67,7 +73,7 @@ export default function AdsFlow() {
                     </div>
 
                     <div className="container-step">
-                        {getStepContent(currentStep)}
+                        {getStepContent(currentStep, loadGraph)}
                     </div>
 
                     <div className="buttons-next-back">
@@ -84,6 +90,8 @@ export default function AdsFlow() {
                                 upScreenTop()
                                 setCurrentStep((prevStep) => prevStep + 1)
                                 setDirection(1)
+                                steps[currentStep] === 'Context' ? setLoadGraph(true) : null
+
                             }}
                         >Continue to {steps[currentStep + 1]}  <FaLongArrowAltRight size={20} />
                         </button>

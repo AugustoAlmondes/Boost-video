@@ -24,10 +24,10 @@ export default function BrandAssetsUpload({ onUpload, tokenFile, file }) {
             >
                 {
                     tokenFile ?
-                        <h3>Brand Assets - {file.name}</h3> :
-                        <h3>Brand Assets </h3>
+                        <h3 className='subtitle-box'>Brand Assets - {file.name}</h3> :
+                        <h3 className='subtitle-box'>Brand Assets </h3>
                 }
-                <div className="brand-assets-upload">
+                <div className="brand-assets-upload gray-background">
                     <div>
                         <FaImage className="brand-assets-icon"
                             style={tokenFile ? { backgroundColor: 'var(--blue)' } : {}}

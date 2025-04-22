@@ -65,7 +65,7 @@
 
 .progress-group {
     /* border: 2px solid var(--green); */
-    border: 2px solid rgb(202, 202, 202);
+    border: 2px solid rgb(224, 224, 224);
     padding: 25px;
     min-width: 400px;
     border-radius: 12px;
@@ -116,7 +116,7 @@
 }
 
 .analysis-summary {
-    border: 2px solid rgb(202, 202, 202);
+    border: 2px solid rgb(224, 224, 224);
     padding: 25px;
     min-width: 400px;
     border-radius: 12px;

@@ -34,13 +34,13 @@ const ColorlibConnector = styled(StepConnector, {
             right: 0,
             height: '100%',
             width: '100%',
-            background: 'linear-gradient(to right, var(--green),#5f8c23)',
+            backgroundColor: 'rgba(0,0,0, 0.38)',
             borderRadius: 1,
             animation: direction === 1 ? `${fillFromRight} 0.5s ease-out forwards` : 'none',
         },
     },
     [`&.${stepConnectorClasses.completed} .${stepConnectorClasses.line}`]: {
-        backgroundColor: 'var(--green)',
+        backgroundColor: 'rgba(0,0,0, 0.38)',
     },
     [`& .${stepConnectorClasses.line}`]: {
         height: 3,
@@ -54,7 +54,7 @@ const ColorlibConnector = styled(StepConnector, {
 }));
 
 const ColorlibStepIconRoot = styled('div')(({ ownerState }) => ({
-    backgroundColor: 'var(--lightred)',
+    backgroundColor: 'rgb(220, 220, 220)',
     zIndex: 1,
     color: '#fff',
     width: 50,
@@ -66,13 +66,13 @@ const ColorlibStepIconRoot = styled('div')(({ ownerState }) => ({
     fontSize: '1.5rem',
     transition: 'all 0.3s ease-in-out',
     ...(ownerState.active && {
-        backgroundColor: '#43a047',
+        backgroundColor: 'var(--green)',
         transform: 'scale(1.2)',
         boxShadow: '0 4px 10px rgba(0,0,0,.3)',
     }),
     ...(ownerState.completed && {
-        backgroundColor: 'var(--green)',
-        transform: 'scale(1.05)',
+        zIndex: 2,
+        backgroundColor: 'gray',
         boxShadow: '0 4px 10px rgba(0,0,0,.2)',
     }),
 
