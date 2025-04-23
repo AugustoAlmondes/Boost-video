@@ -16,6 +16,7 @@ import NewCA from '../../components/StepsAdsFlow/NewCA/NewCA';
 import StepSuggestions from '../../components/StepsAdsFlow/StepSuggestions/StepSuggestions';
 import FinalReport from '../../components/StepsAdsFlow/NewCA/FinalReport/FinalReport';
 import { MdOutlineLoop } from 'react-icons/md';
+import Header from '../../components/Header/Header';
 
 
 const steps = [
@@ -66,7 +67,9 @@ export default function AdsFlow() {
     console.log("estado", loadGraph);
 
     return (
+
         <>
+            <Header />
             <div className="container-ads-flow">
                 <div className='ads-flow-box'>
                     <div className="container-progress-bar">
@@ -91,9 +94,18 @@ export default function AdsFlow() {
                         {
                             steps[currentStep] === 'Report' ?
                                 <>
-                                    <button className="middle-button"> <MdOutlineLoop size={20} />  Run Another Analysis</button>
+                                    <button className="middle-button"
+                                        onClick={() => {
+                                            upScreenTop()
+                                            setTimeout(() => {
+                                                setCurrentStep(0)
+                                                setDirection(0)
+                                            }, 500);
+                                        }}
+                                    > <MdOutlineLoop size={20}
+                                        />  Run Another Analysis</button>
                                     <div className="smart-edit-wrapper">
-                                        <button className="smart-edit-button" style={{margin:0}}><FaMagic /> Continue with Smart Edit</button>
+                                        <button className="smart-edit-button" style={{ margin: 0 }}><FaMagic /> Continue with Smart Edit</button>
                                         <span className="pro-badge">PRO</span>
                                     </div>
                                 </> :

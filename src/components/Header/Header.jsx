@@ -15,7 +15,7 @@ export default function Header() {
         <header className={`container-header ${menuAberto ? 'menu-aberto' : ''}`}>
 
             <div className="logo-header exit">
-                <Link to="/home"
+                <Link to="/"
                 style={{color: 'white'}}
                 >klike</Link>
                 {/* klike */}
@@ -23,12 +23,12 @@ export default function Header() {
 
             <div className={`menu-mobile-container ${menuAberto ? 'ativo' : ''}`}>
                 <div className="logo-header in">
-                    <Link to="/home"
+                    <Link to="/"
                     style={{color: 'white'}}
                     >klike</Link></div>
                 <nav className="options-header">
                     <ul>
-                        <Link to="/home" onClick={handleFecharMenu}
+                        <Link to="/" onClick={handleFecharMenu}
                         style={{color: 'white'}}
                         >
                             <li>

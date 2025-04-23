@@ -9,7 +9,8 @@ import UseCasesSection from "../../components/HomeComponents/UseCasesSection/Use
 import './home.css';
 
 export default function Home() {
-    return (
+    return (<>
+        <Header />
         <div className="home-container">
             <SubHeader />
             <UseCasesSection />
@@ -18,5 +19,6 @@ export default function Home() {
             <Testimony />
             <Footer />
         </div>
+    </>
     );
 }
