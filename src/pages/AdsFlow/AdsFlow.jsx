@@ -6,7 +6,7 @@ import TextFieldsIcon from '@mui/icons-material/TextFields';
 import InsightsIcon from '@mui/icons-material/Insights';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import DescriptionIcon from '@mui/icons-material/Description';
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
+import { FaLongArrowAltLeft, FaLongArrowAltRight, FaMagic } from 'react-icons/fa';
 import StepUpload from '../../components/StepsAdsFlow/StepUpload/StepUpload';
 import CampaignContext from '../../components/StepsAdsFlow/CampaignContext/CampaignContext';
 import Footer from '../../components/Footer/Footer';
@@ -15,6 +15,7 @@ import CreativeAnalysis from '../../components/StepsAdsFlow/CreativeAnalysis/Cre
 import NewCA from '../../components/StepsAdsFlow/NewCA/NewCA';
 import StepSuggestions from '../../components/StepsAdsFlow/StepSuggestions/StepSuggestions';
 import FinalReport from '../../components/StepsAdsFlow/NewCA/FinalReport/FinalReport';
+import { MdOutlineLoop } from 'react-icons/md';
 
 
 const steps = [
@@ -33,7 +34,7 @@ const stepIcons = {
     5: <DescriptionIcon />
 };
 
-function getStepContent(step, loadGraph=false) {
+function getStepContent(step, loadGraph = false) {
     switch (step) {
         case 0:
             return <StepUpload />;
@@ -62,8 +63,8 @@ export default function AdsFlow() {
     const [direction, setDirection] = useState(1); // 1 para Next e 0 para Back
     const [loadGraph, setLoadGraph] = useState(false);
 
-    console.log("estado",loadGraph);
-    
+    console.log("estado", loadGraph);
+
     return (
         <>
             <div className="container-ads-flow">
@@ -83,22 +84,32 @@ export default function AdsFlow() {
                                 setTimeout(() => {
                                     setCurrentStep((prevStep) => prevStep - 1)
                                     setDirection(0)
-                                },700);
+                                }, 500);
                             }}
                         > <FaLongArrowAltLeft size={20} /> Back</button>
 
-                        <button className="next-button"
-                            onClick={() => {
-                                upScreenTop()
-                                setTimeout(() => {
-                                    setCurrentStep((prevStep) => prevStep + 1)
-                                    setDirection(1)
-                                    steps[currentStep] === 'Context' ? setLoadGraph(true) : null
-                                }, 700);
+                        {
+                            steps[currentStep] === 'Report' ?
+                                <>
+                                    <button className="middle-button"> <MdOutlineLoop size={20} />  Run Another Analysis</button>
+                                    <div className="smart-edit-wrapper">
+                                        <button className="smart-edit-button" style={{margin:0}}><FaMagic /> Continue with Smart Edit</button>
+                                        <span className="pro-badge">PRO</span>
+                                    </div>
+                                </> :
+                                <button className="next-button"
+                                    onClick={() => {
+                                        upScreenTop()
+                                        setTimeout(() => {
+                                            setCurrentStep((prevStep) => prevStep + 1)
+                                            setDirection(1)
+                                            steps[currentStep] === 'Context' ? setLoadGraph(true) : null
+                                        }, 500);
 
-                            }}
-                        >Continue to {steps[currentStep + 1]}  <FaLongArrowAltRight size={20} />
-                        </button>
+                                    }}
+                                >Continue to {steps[currentStep + 1]}  <FaLongArrowAltRight size={20} />
+                                </button>
+                        }
                     </div>
                 </div>
             </div>

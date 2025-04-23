@@ -35,16 +35,32 @@ const fadeVariants = {
 
 export default function SubHeader() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const[currentIndexImage, setCurrentIndexImage] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) =>
+
+            setCurrentIndexImage((prevIndex) =>
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
             );
-        }, 7000);
 
+            setTimeout(() => {
+                setCurrentIndex((prevIndex) =>
+                    prevIndex === images.length - 1 ? 0 : prevIndex + 1
+                );
+            },500)
+        }, 7000);
         return () => clearInterval(interval);
     }, []);
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentIndexImage((prevIndex) =>
+    //             prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    //         );
+    //     }, 6800);
+    //     return () => clearInterval(interval);
+    // }, []);
 
     return (
         <div className="container-home">
@@ -112,7 +128,7 @@ export default function SubHeader() {
                     <img
                         key={index}
                         src={image}
-                        className={`fade-image ${index === currentIndex ? 'active' : ''}`}
+                        className={`fade-image ${index === currentIndexImage ? 'active' : ''}`}
                         alt={`slide-${index}`}
                     />
                 ))}
