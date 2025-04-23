@@ -5,8 +5,12 @@ import { useRef, useState } from "react";
 export default function StepSuggestions() {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [hookState, setHookState] = useState(false);
-    const [CTAState, setCTAState] = useState(false);
+    const [hookState, setHookState] = useState(0);
+    const [CTAState, setCTAState] = useState(0);
+
+    const [hookActive, setHookActive] = useState(false);
+    const [CTAActive, setCTAActive] = useState(false);
+    const [scriptActive, setScriptActive] = useState('');
 
     const togglePlay = () => {
         const video = videoRef.current;
@@ -18,6 +22,11 @@ export default function StepSuggestions() {
             setIsPlaying(false);
         }
     };
+
+    function handleChangeTextarea(event) {
+        const value = event.target.value;
+        setScriptActive(value);
+    }
 
     return (
         <div className="step-suggestions-container">
@@ -52,7 +61,6 @@ export default function StepSuggestions() {
                             <div className="video-meta-action">
                                 <p style={{ fontSize: '1.2rem', fontWeight: '500', color: '#4b5563' }}>Video Information</p>
                                 <div className="video-meta">
-                                    <h3>Name: <span>ads.mp4</span></h3>
                                     <h3>Original Duration: <span>0:45</span></h3>
                                     <h3>File Name:  <span>ads.mp4</span></h3>
                                     <h3>Size: <span>4.2MB</span></h3>
@@ -72,38 +80,50 @@ export default function StepSuggestions() {
                 </div>
             </div>
 
-            <div className="container-hook-optimization">
+            <div className={hookActive ? "container-hook-optimization active" : "container-hook-optimization"}>
                 <p className="subtitle-box">Hook Optimization</p>
                 {/* <div className="current-hook-area"> */}
-                <div className={hookState ? "current-hook-area ads-active" : "current-hook-area"}
-                    onClick={() => setHookState(!hookState)}
+                <div className={hookState === 2 ? "current-hook-area ads-active" : "current-hook-area"}
+                    onClick={() => {
+                        setHookState(2)
+                        setHookActive(true)
+                    }}
                 >
                     <h4>Current Hook <span>First 3 seconds</span></h4>
                     <p>"Look for the perfect shampoo?</p>
                 </div>
                 {/* <div className="suggested-hook-area"> */}
-                <div className={hookState ? "suggested-hook-area" : "suggested-hook-area ads-active"}
-                    onClick={() => setHookState(!hookState)}
+                <div className={hookState === 1 ? "suggested-hook-area ads-active" : "suggested-hook-area "}
+                    onClick={() => {
+                        setHookState(1)
+                        setHookActive(true)
+                    }}
                 >
                     <h4>Suggested Hook <span> 45% CTR</span></h4>
                     <p>"Transform your curls in just one whash!"</p>
                 </div>
             </div>
 
-            <div className="container-call-to-action">
+            <div className={CTAActive ? "container-call-to-action active" : "container-call-to-action"}>
                 <p className='subtitle-box' >Call to action</p>
                 <div className="call-actions-suggestions">
                     {/* <div className="shop-now-button"> */}
-                    <div className={CTAState ? "shop-now-button" : "shop-now-button ads-active"}
-                        onClick={() => setCTAState(!CTAState)}
+                    <div className={CTAState === 2 ? "shop-now-button ads-active" : "shop-now-button"}
+                        onClick={() => {
+                            setCTAState(2)
+                            setCTAActive(true)
+                        }}
                     >
                         <h4>Shop Now <span>+15% CTR</span></h4>
                         <p>Best for direct sales</p>
                     </div>
 
                     {/* <div className="try-risk-free-button"> */}
-                    <div className={CTAState ? "try-risk-free-button ads-active" : "try-risk-free-button"}
-                        onClick={() => setCTAState(!CTAState)}
+                    <div className={CTAState === 1 ? "try-risk-free-button ads-active" : "try-risk-free-button"}
+                        onClick={() => {
+                            setCTAState(1)
+                            setCTAActive(true)
+                        }}
                     >
                         <h4>Try Risk Free <span>+28% CTR</span></h4>
                         <p>Recommended for your audience</p>
@@ -111,11 +131,13 @@ export default function StepSuggestions() {
                 </div>
             </div>
 
-            <div className="container-script-optmization">
+            <div className={ scriptActive ? "container-script-optmization active" : "container-script-optmization"}>
                 <p className="subtitle-box">Script Optimization</p>
                 <textarea
                     className="script-caption-textarea"
                     placeholder="Enter your ad script or caption here"
+                    // value={scriptValue}
+                    onChange={handleChangeTextarea}
                     // value={value}
                     // onChange={onChange}
                     rows={6}

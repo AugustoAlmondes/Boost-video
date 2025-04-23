@@ -54,7 +54,7 @@ const ColorlibConnector = styled(StepConnector, {
 }));
 
 const ColorlibStepIconRoot = styled('div')(({ ownerState }) => ({
-    backgroundColor: 'rgb(220, 220, 220)',
+    backgroundColor: '#E8E8E8',
     zIndex: 1,
     color: '#fff',
     width: 50,
@@ -66,7 +66,7 @@ const ColorlibStepIconRoot = styled('div')(({ ownerState }) => ({
     fontSize: '1.5rem',
     transition: 'all 0.3s ease-in-out',
     ...(ownerState.active && {
-        backgroundColor: 'var(--green)',
+        backgroundColor: 'var(--blue)',
         transform: 'scale(1.2)',
         boxShadow: '0 4px 10px rgba(0,0,0,.3)',
     }),

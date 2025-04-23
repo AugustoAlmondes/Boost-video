@@ -43,13 +43,15 @@ export default function CreativeAnalysis({ loadGraph }) {
 
     useEffect(() => {
         const targetValue = 87;
-        const duration = 3000;
+        const duration = 2000;
         const startTime = performance.now();
 
         const animate = (currentTime) => {
             const progress = Math.min((currentTime - startTime) / duration, 1);
             const currentVal = Math.floor(progress * targetValue);
-            setDisplayValue(currentVal);
+            setTimeout(() => {
+                setDisplayValue(currentVal);
+            }, 1500);
             if (progress < 1) {
                 requestAnimationFrame(animate);
             }
@@ -65,10 +67,14 @@ export default function CreativeAnalysis({ loadGraph }) {
                 className="creative-analysis-container"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
             >
 
-                <div className="cards-performance-group">
+                <MOTION.div className="cards-performance-group"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6, duration: 1 }}
+                >
 
                     <CardPerformance
                         icon={<IoTimeOutline />}
@@ -77,6 +83,8 @@ export default function CreativeAnalysis({ loadGraph }) {
                         color="green"
                         description="Average View Time"
                         animation={loadGraph}
+                        delay={0.2}
+                        timeout={800}
                     />
 
                     <CardPerformance
@@ -86,6 +94,8 @@ export default function CreativeAnalysis({ loadGraph }) {
                         color="green"
                         description="Click-Through Rate"
                         animation={loadGraph}
+                        delay={0.2}
+                        timeout={800}
                     />
 
 
@@ -96,12 +106,18 @@ export default function CreativeAnalysis({ loadGraph }) {
                         color="green"
                         description="Conversion Rate"
                         animation={loadGraph}
+                        delay={0.2}
+                        timeout={800}
                     />
-                </div>
+                </MOTION.div>
 
                 <div className="creative-analysis-grid">
 
-                    <div className="progress-group">
+                    <MOTION.div className="progress-group"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 2.5, duration: 0.6 }}
+                    >
                         <div>
                             <div className="label-card-progress" style={{ marginBottom: '10px' }}>
                                 <label>Performance Score</label>
@@ -115,9 +131,13 @@ export default function CreativeAnalysis({ loadGraph }) {
                                 {` ${displayValue}% `}of ads in your industry
                             </p>
                         </div>
-                    </div>
+                    </MOTION.div>
 
-                    <div className="progress-group ">
+                    <MOTION.div className="progress-group "
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 2.5, duration: 0.6 }}
+                    >
 
                         <div className="label-card-progress"
                             style={{ marginBottom: '10px' }}
@@ -131,6 +151,7 @@ export default function CreativeAnalysis({ loadGraph }) {
                                 value={87}
                                 max={100}
                                 animation={loadGraph}
+                                timeout={1500}
                             />
                         </div>
                         <div>
@@ -139,10 +160,16 @@ export default function CreativeAnalysis({ loadGraph }) {
                                 value={60}
                                 max={100}
                                 animation={loadGraph}
+                                timeout={1500}
                             />
                         </div>
-                    </div>
-                    <div className="progress-group" >
+                    </MOTION.div>
+
+                    <MOTION.div className="progress-group"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 4, duration: 0.6 }}
+                    >
 
                         <div className="label-card-progress"
                             style={{ marginBottom: '10px' }}
@@ -157,12 +184,17 @@ export default function CreativeAnalysis({ loadGraph }) {
                                     max={100}
                                     complement="%"
                                     animation={loadGraph}
+                                    timeout={4000}
                                 />
                             </div>
                         ))}
-                    </div>
+                    </MOTION.div>
 
-                    <div className="progress-group">
+                    <MOTION.div className="progress-group"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 4, duration: 1 }}
+                    >
                         <Card
                             elevation={0}
                             className="card"
@@ -203,10 +235,15 @@ export default function CreativeAnalysis({ loadGraph }) {
                                 />
                             </CardContent>
                         </Card>
-                    </div>
+                    </MOTION.div>
                 </div>
 
-                <div className="progress-group exit">
+                <MOTION.div className="progress-group exit"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 5.5, duration: 1 }}
+                    viewport={{ once: true }}
+                >
                     <Card
                         elevation={0}
                         className="card card2"
@@ -294,25 +331,45 @@ export default function CreativeAnalysis({ loadGraph }) {
                             </div>
                         </CardContent>
                     </Card>
-                </div>
+                </MOTION.div>
 
-                <div className="analysis-summary">
+                <MOTION.div className="analysis-summary"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 6, duration: 1 }}
+                    viewport={{ once: true }}
+                >
                     <h3>Analysis Summary</h3>
-                    <ul>
-                        <li>
+                    <ul className="gray-background">
+                        <MOTION.li
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 6.2, duration: .6 }}
+                            viewport={{ once: true }}
+                        >
                             <IoCheckmarkCircleSharp className="icon-success" />
                             <span>Strong visual hierarchy and composition that captures attention effectively</span>
-                        </li>
-                        <li>
+                        </MOTION.li>
+                        <MOTION.li
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 6.4, duration: .6 }}
+                            viewport={{ once: true }}
+                        >
                             <IoCheckmarkCircleSharp className="icon-success" />
                             <span>Brand elements are well integrated and consistently presented</span>
-                        </li>
-                        <li>
+                        </MOTION.li>
+                        <MOTION.li
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 6.8, duration: .6 }}
+                            viewport={{ once: true }}
+                        >
                             <IoIosInformationCircle className="icon-info" />
                             <span>Consider strengthening the call-to-action for better conversion potential</span>
-                        </li>
+                        </MOTION.li>
                     </ul>
-                </div>
+                </MOTION.div>
             </MOTION.div >
         </>
     );

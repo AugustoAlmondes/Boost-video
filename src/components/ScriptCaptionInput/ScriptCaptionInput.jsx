@@ -4,9 +4,7 @@ import '../../pages/AdsFlow/adsflow.css';
 export default function ScriptCaptionInput({ value, onChange }) {
     return (
         <>
-            <div className="script-caption-container"
-                style={value ? { borderColor: 'var(--blue)', transition:'.2s' } : {}}
-            >
+            <div className={value ? "script-caption-container active" : "script-caption-container"}>
                 <h3 className="subtitle-box">Script / Caption</h3>
                 <textarea
                     className="script-caption-textarea"

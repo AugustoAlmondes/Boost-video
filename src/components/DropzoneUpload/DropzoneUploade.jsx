@@ -27,11 +27,11 @@ export default function DropzoneUpload({ onFileSelected, tokenFile, file }) {
     return (
         <>
             <div
-                className={"dropzone" + (tokenFile ? " tokenFile" : "")}
+                className={tokenFile ? "dropzone active" : "dropzone"}
                 // onClick={handleClick}
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
-                style={tokenFile ? { borderColor: 'var(--blue)' } : {}}
+                // style={tokenFile ? { borderColor: 'var(--blue)' } : {}}
             >
                 <MdCloudUpload className="dropzone-icon" size={48}
                     style={tokenFile ? { color: 'var(--blue)' } : {}}

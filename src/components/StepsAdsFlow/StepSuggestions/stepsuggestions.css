@@ -22,19 +22,36 @@
     gap: 10px;
 }
 
-.preview-section,
+.preview-section{
+    width: 800px;
+    padding: 20px;
+    background: white;
+    /* border: 2px solid var(--lightblue); */
+    border: 2px solid var(--lightblue);
+    box-shadow: 0 0 20px var(--verylightblue);
+}
+
+.container-hook-optimization.active,
+.container-call-to-action.active,    
+.container-script-optmization.active
+{
+    border: 2px solid var(--lightblue);
+    box-shadow: 0 0 20px var(--verylightblue);
+}
+
 .container-hook-optimization,
 .container-call-to-action,
 .container-script-optmization {
     width: 800px;
     padding: 20px;
-    border: 2px solid;
     background: white;
+    border: 2px solid rgb(232, 232, 232);
+    border-radius: 10px;
 }
 
 .preview-section {
-    border-image: linear-gradient(to bottom, var(--lightblue), var(--lightred)) 2;
-    border-radius: 16px;
+    padding: 16px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -50,6 +67,7 @@
     justify-content: space-between;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .video-preview-container {
@@ -58,8 +76,8 @@
     height: 445px;
     border-radius: 16px;
     overflow: hidden;
-    background: linear-gradient(to bottom, #648dcb3f, #f6555525);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .video-mobile-preview {
@@ -157,7 +175,6 @@
 }
 
 .smart-edit-button {
-    background: linear-gradient(70deg, var(--blue), var(--meanblue));
     color: #fff;
     animation: pulse 2s infinite;
     transition: background-color 0.3s;
@@ -218,7 +235,6 @@
 .container-hook-optimization {
     margin-top: 20px;
     font-family: var(--Avenir);
-    border-image: linear-gradient(to bottom, var(--lightred), var(--lightgreen)) 2;
 }
 
 .container-hook-optimization .hook-optimization-title {
@@ -239,7 +255,16 @@
     margin-bottom: 1.5rem;
     font-size: 17px;
     cursor: pointer;
+    transition: .2s;
 }
+
+.current-hook-area:not(.ads-active):hover,
+.suggested-hook-area:not(.ads-active):hover,
+.shop-now-button:not(.ads-active):hover,
+.try-risk-free-button:not(.ads-active):hover {
+    background-color: #e5e7eb;
+
+} 
 
 .current-hook-area h4,
 .suggested-hook-area h4,
@@ -259,13 +284,16 @@
 }
 
 .ads-active {
-    border: 1px solid #3b82f6;
-    background-color: #e5e7eb;
+    /* border: 1px solid #3b82f6; */
+    background-color: var(--blue);
+
+    & h4, & p{
+        color: white;
+    }
 }
 
 .container-call-to-action {
     margin-top: 20px;
-    border-image: linear-gradient(to bottom, var(--lightgreen), var(--lightyellow)) 2;
 }
 
 .call-actions-suggestions .shop-now-button,
@@ -275,7 +303,6 @@
 
 .container-script-optmization {
     margin-top: 20px;
-    border-image: linear-gradient(to bottom, var(--lightyellow), var(--lightblue)) 2;
 }
 
 .container-botton-script-optmization {

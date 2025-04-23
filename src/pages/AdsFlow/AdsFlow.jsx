@@ -80,17 +80,21 @@ export default function AdsFlow() {
                         <button className="back-button" style={currentStep === 0 ? { opacity: 0, pointerEvents: 'none' } : {}}
                             onClick={() => {
                                 upScreenTop()
-                                setCurrentStep((prevStep) => prevStep - 1)
-                                setDirection(0)
+                                setTimeout(() => {
+                                    setCurrentStep((prevStep) => prevStep - 1)
+                                    setDirection(0)
+                                },700);
                             }}
                         > <FaLongArrowAltLeft size={20} /> Back</button>
 
                         <button className="next-button"
                             onClick={() => {
                                 upScreenTop()
-                                setCurrentStep((prevStep) => prevStep + 1)
-                                setDirection(1)
-                                steps[currentStep] === 'Context' ? setLoadGraph(true) : null
+                                setTimeout(() => {
+                                    setCurrentStep((prevStep) => prevStep + 1)
+                                    setDirection(1)
+                                    steps[currentStep] === 'Context' ? setLoadGraph(true) : null
+                                }, 700);
 
                             }}
                         >Continue to {steps[currentStep + 1]}  <FaLongArrowAltRight size={20} />

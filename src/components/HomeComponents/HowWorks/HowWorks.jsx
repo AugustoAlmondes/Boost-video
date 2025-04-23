@@ -57,7 +57,7 @@ export default function HowWorks() {
 
     return (
         <section className="how-works-section">
-            <h1>How Klile Works</h1>
+            <h1>How Klike Works</h1>
             <div className="how-works-wrapper-v2">
                 <MOTION.div
                     className="how-works-image"

@@ -19,8 +19,7 @@ export default function BrandAssetsUpload({ onUpload, tokenFile, file }) {
 
     return (
         <>
-            <div className="container-brand-assets"
-                style={tokenFile ? { borderColor: 'var(--blue)' } : {}}
+            <div className={tokenFile ? "container-brand-assets active" : "container-brand-assets"}
             >
                 {
                     tokenFile ?
@@ -29,11 +28,10 @@ export default function BrandAssetsUpload({ onUpload, tokenFile, file }) {
                 }
                 <div className="brand-assets-upload gray-background">
                     <div>
-                        <FaImage className="brand-assets-icon"
-                            style={tokenFile ? { backgroundColor: 'var(--blue)' } : {}}
+                        <FaImage className={tokenFile ? "brand-assets-icon active" : "brand-assets-icon"}
+                            // style={tokenFile ? { backgroundColor: 'var(--blue)' } : {}}
                         />
-                        <button className="brand-assets-button" onClick={handleClick}
-                            style={tokenFile ? { backgroundColor: 'var(--blue)' } : {}}
+                        <button className={tokenFile ? "brand-assets-button active" : "brand-assets-button"} onClick={handleClick}
                         >
                             Upload assets
                         </button>
