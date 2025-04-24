@@ -1,8 +1,12 @@
 import './smartedit.css';
-import Footer from '../../components/Footer/Footer';
-import Video from '../../../public/videos/ads.mp4';
+import Video from '/videos/ads.mp4';
 import { useEffect } from 'react';
 import { MdArrowBackIosNew } from "react-icons/md";
+import { useState } from 'react';
+import FormatSelection from '../../components/SmartEditComponents/FormatSelection/FormatSelection';
+import LengthOptimization from '../../components/SmartEditComponents/LengthOptimizantion/LengthOptimization';
+import StorytellingEnhancement from '../../components/SmartEditComponents/StorytellingEnhancement/StorytellingEnhancement';
+import AudioEnhancement from '../../components/SmartEditComponents/AudioEnhancement/AudioEnhancement';
 
 export default function SmartEdit() {
     useEffect(() => {
@@ -42,7 +46,12 @@ export default function SmartEdit() {
         };
     }, []);
 
+    const [squad, setSquad] = useState(1);
+    const [suggestion, setSuggestion] = useState([]);
+    const [track, setTrack] = useState(1);
+
     return (
+
         <>
             <div className="container-smartedit">
                 <div className="box-left-side">
@@ -56,26 +65,18 @@ export default function SmartEdit() {
                     </div>
                 </div>
 
-                <div className="resizer" ><MdArrowBackIosNew size={20}/></div>
+                <div className="resizer" ><MdArrowBackIosNew size={20} /></div>
                 <div className="box-right-side">
-                    <div className="box-format-selection">
-                        <h3 className='box-title'>Format Selection</h3>
 
-                        <div className="format-selection">
-                            <h4 className='box-subtitle'>Recomended Format</h4>
-                            <button>AI Suggested</button>
+                    <FormatSelection squad={squad} setSquad={setSquad} />
 
-                            <p>Based on your content, we recommend vertical format (9:16) for optimal
-                            performance on Instagram Reels and TikTok.</p>
-                            <ul>
-                                <li className='nine-sixteen'></li>
-                                <li className='one-one'></li>
-                                <li className='sixteen-nine'></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <LengthOptimization suggestion={suggestion} setSuggestion={setSuggestion} />
+
+                    <StorytellingEnhancement />
+
+                    <AudioEnhancement track={track} setTrack={setTrack} />
                 </div>
-            </div>
+            </div >
         </>
     );
 }
