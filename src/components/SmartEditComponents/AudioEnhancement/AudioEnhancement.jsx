@@ -28,7 +28,7 @@ export default function AudioEnhancement({ track, setTrack }) {
                     <div className="card-content-audio">
                         <div className="card-header">
                             <h4 className="card-title">Voice Over</h4>
-                            <span className="label-box"> <BsStars /> AI Generated</span>
+                            <span className="label-box-ai"> <BsStars /> AI Generated</span>
                         </div>
                         <div className="card-audio-info gray-background">
 
@@ -50,7 +50,7 @@ export default function AudioEnhancement({ track, setTrack }) {
                     <div className="card-content-audio">
                         <div className="card-header">
                             <h4 className="card-title">Background Music</h4>
-                            <button className="outline-button small">Select Track</button>
+                            <button className="label-box">Select Track</button>
                         </div>
 
                         {listTracks.map((tck, idx) => (
@@ -88,7 +88,6 @@ export default function AudioEnhancement({ track, setTrack }) {
 
                 {/* Navigation Buttons */}
                 <div className="enhancement-buttons">
-                    <button className="btn-back">Back</button>
                     <button className="apply-changes">Apply Changs</button>
                 </div>
             </MOTION.div>

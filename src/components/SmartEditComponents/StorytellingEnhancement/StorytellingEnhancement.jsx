@@ -9,8 +9,8 @@ export default function StorytellingEnhancement() {
 
                 <div className="enhancement-card">
                     <div className="enhancement-header">
-                        <h4>Hook Optimization</h4>
-                        <span className="label-box"><BsStars/> AI Analyzing</span>
+                        <h4 className='box-subtitle'>Hook Optimization</h4>
+                        <span className="label-box-ai"><BsStars/> AI Analyzing</span>
                     </div>
                     <p className="enhancement-sub">First 3 seconds optimized to capture attention:</p>
                     <div className="edit-box">
@@ -20,8 +20,8 @@ export default function StorytellingEnhancement() {
 
                 <div className="enhancement-card">
                     <div className="enhancement-header">
-                        <h4>Value Proposition</h4>
-                        <span className="status suggested">Suggested Edit</span>
+                        <h4 className='box-subtitle'>Value Proposition</h4>
+                        <span className="label-box">Suggested Edit</span>
                     </div>
                     <p className="enhancement-sub">Core message restructured:</p>
                     <div className="edit-box">
@@ -31,8 +31,8 @@ export default function StorytellingEnhancement() {
 
                 <div className="enhancement-card">
                     <div className="enhancement-header">
-                        <h4>Call-to-Action</h4>
-                        <span className="status suggested">Suggested Edit</span>
+                        <h4 className='box-subtitle'>Call-to-Action</h4>
+                        <span className="label-box">Suggested Edit</span>
                     </div>
                     <p className="enhancement-sub">Recommended CTA change:</p>
                     <div className="edit-box">
@@ -41,7 +41,6 @@ export default function StorytellingEnhancement() {
                 </div>
 
                 <div className="enhancement-buttons">
-                    <button className="btn-back">Back</button>
                     <button className="apply-changes">Apply Changes</button>
                 </div>
             </div>

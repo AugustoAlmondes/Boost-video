@@ -41,7 +41,7 @@
 }
 
 .edit-box {
-    background-color: var(--verylightyellow);
+    background-color: var(--verylightgreen);
     border-radius: 8px;
     padding: 10px;
     font-size: 14px;
@@ -51,7 +51,7 @@
 
 .enhancement-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     margin-top: 20px;
 }
 

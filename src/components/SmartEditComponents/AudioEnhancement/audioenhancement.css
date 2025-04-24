@@ -114,16 +114,16 @@
     justify-content: space-between;
     align-items: center;
     transition: .2s;
+    border: 2px solid #ffffff;
 
     &:hover{
-        transition: .2s;
         background-color: #E8E8E8;
         cursor: pointer;
     }
 }
 
 .track.active{
-    background-color: #CFCFCF;
+    border: 2px solid var(--blue);
 }
 
 .track-info {
@@ -164,11 +164,11 @@
     font-size: 14px;
     cursor: pointer;
     transition: 0.2s;
-    background-color: var(--verylightgreen);
+    background-color: var(--verylightyellow);
 }
 
 .outline-button:hover {
-    background-color: var(--lightgreen);
+    background-color: var(--lightyellow);
 }
 
 .outline-button.small {
@@ -201,7 +201,7 @@
 }
 
 .ghost-button:hover {
-    color: var(--blue);
+    color: green;
 }
 
 .icon-button {
@@ -212,6 +212,7 @@
 
 /* Sound effects buttons */
 .sound-buttons {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;

@@ -38,7 +38,11 @@
     font-family: var(--Avenir);
     margin: 10px 0;
     width: 100%;
-
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #f5f5f5;
+    background-color: #f5f5f5;
+    transition: .2s;
     & p{
         margin-top: 10px;
         width: 100%;
@@ -53,22 +57,18 @@
     }
 
     &:hover{
-        border: 1px solid #B5B5B5;
+        border: 2px solid #B5B5B5;
         cursor: pointer;
         transition: .2s;
     }
 }
 
 .suggestion.active{
-    border: 1px solid #B5B5B5;
-    background: linear-gradient(-30deg, var(--lightblue), var(--blue));
+    border: 2px solid var(--blue);
+    /* background: linear-gradient(-30deg, var(--lightblue), var(--blue)); */
     cursor: pointer;
-    color: white;
+    /* color: white; */
     transition: .2s;
-
-    & p{
-        color: white;
-    }
 }
 
 .buttons-suggestions{
@@ -77,15 +77,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
 
-    & button{
-        width: 150px;
-        height: 40px;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
-        transition: .2s;
-    }
+.cancel-changes{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
 }
 
 .cancel-changes:hover{

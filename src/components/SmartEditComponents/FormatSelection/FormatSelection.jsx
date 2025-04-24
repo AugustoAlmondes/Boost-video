@@ -1,7 +1,11 @@
 import { BsStars } from 'react-icons/bs';
 import './formatselection.css';
+// import { useState } from 'react';
 
 export default function FormatSelection({ squad, setSquad }) {	
+
+    // const listDimentions = ['9:16', '1:1', '16:9'];
+
     return (
         <>
             <div className="box-format-selection">
@@ -9,14 +13,14 @@ export default function FormatSelection({ squad, setSquad }) {
 
                 <div className="format-selection">
                     <h4 className='box-subtitle'>Recomended Format</h4>
-                    <label className='label-box'> <BsStars/> AI Suggested</label>
+                    <label className='label-box-ai'> <BsStars/> AI Suggested</label>
 
                     <p>Based on your content, we recommend vertical format (9:16) for optimal
                         performance on Instagram Reels and TikTok.</p>
                     <ul>
                         <li className={squad === 1 ? 'nine-sixteen active' : 'nine-sixteen'}
                             onClick={() => setSquad(1)}
-                        > <div className='squad' /> <p>9:16</p></li>
+                        > <div className='squad'/> <p>9:16</p></li>
 
                         <li className={squad === 2 ? 'one-one active' : 'one-one'}
                             onClick={() => setSquad(2)}

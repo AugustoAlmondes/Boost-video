@@ -1,7 +1,6 @@
 import { FaScissors } from 'react-icons/fa6';
 import ProgressBar from '../../ProgressBar/ProgressBar';
 import './lengthoptimization.css';
-import { BsStars } from 'react-icons/bs';
 
 export default function LengthOptimization({ suggestion, setSuggestion }) {
     return (
@@ -11,7 +10,7 @@ export default function LengthOptimization({ suggestion, setSuggestion }) {
 
                         <div className="length-optimization">
                             <div className="box-current-duration">
-                                <h4>Current Duration</h4>
+                                <h4 className='box-subtitle'>Current Duration</h4>
                                 <div className="progress-bar-duration gray-background">
                                     <ProgressBar
                                         label="Current Duration"
@@ -27,9 +26,9 @@ export default function LengthOptimization({ suggestion, setSuggestion }) {
 
                             <div className="box-ai-suggestions">
                                 <h4>AI Suggestions</h4>
-                                <label className='label-box'><BsStars/> Auto Trim</label>
+                                <label className='label-box'> Auto Trim</label>
 
-                                <div className={suggestion.includes(1) ? "suggestion active gray-background" : "suggestion gray-background"}
+                                <div className={suggestion.includes(1) ? "suggestion active" : "suggestion"}
                                     onClick={() => {
                                         !(suggestion.includes(1)) ?
                                             setSuggestion([...suggestion, 1]) :
@@ -40,7 +39,7 @@ export default function LengthOptimization({ suggestion, setSuggestion }) {
                                     <p>Redundant information that slows down the pace</p>
                                 </div>
 
-                                <div className={suggestion.includes(2) ? "suggestion active gray-background" : "suggestion gray-background"}
+                                <div className={suggestion.includes(2) ? "suggestion active" : "suggestion"}
                                     onClick={() => {
                                         !(suggestion.includes(2)) ?
                                             setSuggestion([...suggestion, 2]) :
@@ -51,7 +50,7 @@ export default function LengthOptimization({ suggestion, setSuggestion }) {
                                     <p>Logo animation can be shortened</p>
                                 </div>
 
-                                <div className={suggestion.includes(3) ? "suggestion active gray-background" : "suggestion gray-background"}
+                                <div className={suggestion.includes(3) ? "suggestion active" : "suggestion"}
                                     onClick={() => {
                                         !(suggestion.includes(3)) ?
                                             setSuggestion([...suggestion, 3]) :

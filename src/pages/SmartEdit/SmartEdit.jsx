@@ -7,6 +7,10 @@ import FormatSelection from '../../components/SmartEditComponents/FormatSelectio
 import LengthOptimization from '../../components/SmartEditComponents/LengthOptimizantion/LengthOptimization';
 import StorytellingEnhancement from '../../components/SmartEditComponents/StorytellingEnhancement/StorytellingEnhancement';
 import AudioEnhancement from '../../components/SmartEditComponents/AudioEnhancement/AudioEnhancement';
+import TextEnhancement from '../../components/SmartEditComponents/TextEnhancement/TextEnhancement';
+import SmartEditSummary from '../SmartEditSummary/SmartEditSummary';
+import { BsArrowRight } from 'react-icons/bs';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 
 export default function SmartEdit() {
     useEffect(() => {
@@ -75,7 +79,12 @@ export default function SmartEdit() {
                     <StorytellingEnhancement />
 
                     <AudioEnhancement track={track} setTrack={setTrack} />
+
+                    <TextEnhancement />
+
+                    <button className='button-finish'>Finish Edition <FaLongArrowAltRight size={20}/> </button>
                 </div>
+
             </div >
         </>
     );
