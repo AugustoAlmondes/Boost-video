@@ -37,7 +37,8 @@
     border: 2px solid #f0f5f4;
 
     &:hover{
-        border: 2px solid #c0c0c0;
+        /* border: 2px solid #c0c0c0; */
+    background-color: #E8E8E8;
         cursor: pointer;
         transition: .2s;
     }
@@ -162,15 +163,15 @@
 }
 
 .platforms span {
-    flex: 0 0 200px;
-    width: 250px;
-    height: 40px;
+    /* flex: 0 0 200px; */
+    width: 150px;
+    /* height: 40px; */
     display: flex;
     gap: 5px;
     align-items: center;
     justify-content: center;
     padding: 5px 15px;
-    background-color: var(--green);
+    background-color: var(--lightgreen);
     border-radius: 10px;
     font-size: 14px;
     color: #3a3a3a;

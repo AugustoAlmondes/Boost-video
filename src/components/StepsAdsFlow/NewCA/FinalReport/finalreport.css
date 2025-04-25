@@ -69,8 +69,9 @@
 
     & .socre-button-download button {
         /* background-color: #e5e7eb; */
-        background-color: var(--lightyellow);
-        color: #111827;
+        /* background-color: var(--lightyellow); */
+        background-color: black;
+        color: #f1f3f5;
         font-size: 1rem;
         padding: 12px;
         border: none;
@@ -78,9 +79,9 @@
         transition: .2s;
 
         &:hover {
-            transform: scale(1.02);
+            background-color: #696969;
+            transform: scale(1.01);
             cursor: pointer;
-            background-color: var(--yellow);
         }
     }
 
@@ -109,7 +110,7 @@
                     color: #696969;
                 }
 
-                & .tag {
+                & .tag-score {
                     font-size: 20px;
                 }
             }

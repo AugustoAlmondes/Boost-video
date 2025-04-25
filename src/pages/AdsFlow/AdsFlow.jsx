@@ -17,6 +17,7 @@ import StepSuggestions from '../../components/StepsAdsFlow/StepSuggestions/StepS
 import FinalReport from '../../components/StepsAdsFlow/NewCA/FinalReport/FinalReport';
 import { MdOutlineLoop } from 'react-icons/md';
 import Header from '../../components/Header/Header';
+import { Link } from 'react-router-dom';
 
 
 const steps = [
@@ -105,7 +106,9 @@ export default function AdsFlow() {
                                     > <MdOutlineLoop size={20}
                                         />  Run Another Analysis</button>
                                     <div className="smart-edit-wrapper">
-                                        <button className="smart-edit-button" style={{ margin: 0 }}><FaMagic /> Continue with Smart Edit</button>
+                                        <Link to="/smartedit" >
+                                            <button className="smart-edit-button" style={{ margin: 0 }}><FaMagic /> Continue with Smart Edit</button>
+                                        </Link>
                                         <span className="pro-badge">PRO</span>
                                     </div>
                                 </> :

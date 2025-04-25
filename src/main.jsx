@@ -14,9 +14,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
       <Routes >
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/adsflow" element={<AdsFlow />} />
-        <Route path='/' element={<SmartEdit />} />
+        <Route path='/smartedit' element={<SmartEdit />} />
         <Route path='/summary' element={<SmartEditSummary />} />
       </Routes>
     </Router>

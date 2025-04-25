@@ -9,8 +9,10 @@ import StorytellingEnhancement from '../../components/SmartEditComponents/Storyt
 import AudioEnhancement from '../../components/SmartEditComponents/AudioEnhancement/AudioEnhancement';
 import TextEnhancement from '../../components/SmartEditComponents/TextEnhancement/TextEnhancement';
 import SmartEditSummary from '../SmartEditSummary/SmartEditSummary';
-import { BsArrowRight } from 'react-icons/bs';
-import { FaLongArrowAltRight } from 'react-icons/fa';
+import { BsArrowLeft, BsArrowRight, BsEye, BsFillEyeFill } from 'react-icons/bs';
+import { FaEye, FaLongArrowAltRight } from 'react-icons/fa';
+import { FaArrowRotateLeft } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 export default function SmartEdit() {
     useEffect(() => {
@@ -67,6 +69,11 @@ export default function SmartEdit() {
                             className="video-preview"
                         ></video>
                     </div>
+
+                    <div className="button-undo-preview">
+                        <button className='button-undo'> <FaArrowRotateLeft /> Undo</button>
+                        <button className='button-preview'><BsFillEyeFill size={15} /> Preview</button>
+                    </div>
                 </div>
 
                 <div className="resizer" ><MdArrowBackIosNew size={20} /></div>
@@ -82,7 +89,9 @@ export default function SmartEdit() {
 
                     <TextEnhancement />
 
-                    <button className='button-finish'>Finish Edition <FaLongArrowAltRight size={20}/> </button>
+                    <Link to="/summary">
+                        <button className='button-finish'>Finish Edition <FaLongArrowAltRight size={20}/> </button>
+                    </Link>
                 </div>
 
             </div >

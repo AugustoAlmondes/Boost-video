@@ -59,8 +59,8 @@
 
 .progress-group,
 .analysis-summary {
-    border: 2px solid var(--lightblue);
-    box-shadow: 0 0 20px var(--verylightblue);
+    border: 2px solid rgb(232, 232, 232);
+
     padding: 25px;
     min-width: 400px;
     border-radius: 10px;

@@ -31,15 +31,15 @@ const FinalReport = () => {
                     <ul className="section-labels-tag">
                         <li>
                             <div className="tag-label">Plataform:</div>
-                            <div className="tag">TikTok</div>
+                            <div className="tag-score">TikTok</div>
                         </li>
                         <li>
                             <div className="tag-label">Industry:</div>
-                            <div className="tag">Beauty & Care</div>
+                            <div className="tag-score">Beauty & Care</div>
                         </li>
                         <li>
                             <div className="tag-label">Objective:</div>
-                            <div className="tag">Sales</div>
+                            <div className="tag-score">Sales</div>
                         </li>
                     </ul>
                 </div>
