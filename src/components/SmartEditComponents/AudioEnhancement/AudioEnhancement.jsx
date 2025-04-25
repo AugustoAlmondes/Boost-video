@@ -3,7 +3,7 @@ import { FaPlay, FaBell, FaBolt, FaMusic, FaRandom } from "react-icons/fa";
 import { MdGraphicEq } from "react-icons/md";
 import { FiPlus } from "react-icons/fi";
 import { BsStars } from "react-icons/bs";
-import "./audioEnhancement.css";
+import "./audioenhancement.css";
 
 
 const listTracks = [
