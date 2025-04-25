@@ -1,4 +1,3 @@
-/* AudioEnhancement.css */
 .audio-enhancement {
     padding: 20px;
     background-color: white;
@@ -75,7 +74,7 @@
     text-decoration: underline;
 }
 
-.card-audio-info{
+.card-audio-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,9 +98,9 @@
 }
 
 .icon-text-audio:hover {
-        transition: .2s;
-        background-color: var(--lightblue);
-        cursor: pointer;
+    transition: .2s;
+    background-color: var(--lightblue);
+    cursor: pointer;
 }
 
 .icon-text-audio svg {
@@ -116,13 +115,13 @@
     transition: .2s;
     border: 2px solid #ffffff;
 
-    &:hover{
+    &:hover {
         background-color: #E8E8E8;
         cursor: pointer;
     }
 }
 
-.track.active{
+.track.active {
     border: 2px solid var(--blue);
 }
 
