@@ -1,11 +1,10 @@
 import { BsStars } from 'react-icons/bs';
 import { FiRefreshCw } from 'react-icons/fi';
-import { PiTextAaBold } from 'react-icons/pi';
 import { MdOutlineFormatAlignLeft, MdOutlineFormatAlignCenter, MdOutlineFormatAlignRight } from 'react-icons/md';
 import './textenhancement.css';
-import { AiFillInstagram, AiOutlineSafety } from "react-icons/ai";
+import {  AiOutlineSafety } from "react-icons/ai";
 import { useState } from 'react';
-import { FaBullhorn, FaFacebook, FaInstagram, FaShoppingCart, FaTiktok, FaTwitter, FaUserPlus, FaYoutube } from 'react-icons/fa';
+import {  FaFacebook, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 export default function TextEnhancement() {
 
