@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { motion as MOTION } from 'framer-motion';
 import { Stepper, Step, StepLabel, StepContent, Box } from '@mui/material';
 
-import HowWorksImage from '/img/klike.png';
+import HowWorksImage from '/img/boost2.jpg';
 import UploadImageWork from '/howworks/upload.png';
 import PredictionImageWork from '/howworks/prediction.png';
 import AnalysisImageWork from '/howworks/analysis.png';
@@ -13,13 +13,13 @@ const steps = [
         label: 'Upload Creative',
         image: UploadImageWork,
         color: '#B9E184',
-        description: "Send your ads optimized directly to platforms such as Google and TikTok easily. After analysis and adjustments, publish with just a few clicks and reach your audience much more accurately.",
+        description: "Send your video optimized directly to platforms such as Google and TikTok easily. After analysis and adjustments, publish with just a few clicks and reach your audience much more accurately.",
     },
     {
         label: 'Performance and Insights',
         image: PredictionImageWork,
         color: '#F65655',
-        description: "Have access to detailed performance forecasts before you even publish your ads. Our AI anticipates the results based on previous campaign data and standards.",
+        description: "Have access to detailed performance forecasts before you even publish your video. Our AI anticipates the results based on previous campaign data and standards.",
     },
     {
         label: 'Creative Edits',
@@ -37,7 +37,7 @@ const steps = [
         label: 'Optimization',
         image: PredictionImageWork,
         color: '#FFA500',
-        description: "Continuously improve your ads with real-time feedback and AI-driven optimization strategies.",
+        description: "Continuously improve your video with real-time feedback and AI-driven optimization strategies.",
     },
 ];
 
@@ -57,7 +57,7 @@ export default function HowWorks() {
 
     return (
         <section className="how-works-section">
-            <h1>How Klike Works</h1>
+            <h1>How Boost Works</h1>
             <div className="how-works-wrapper-v2">
                 <MOTION.div
                     className="how-works-image"

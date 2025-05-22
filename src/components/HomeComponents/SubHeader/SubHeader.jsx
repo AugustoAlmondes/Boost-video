@@ -3,7 +3,7 @@ import '../../../index.css';
 import { IoIosArrowDown } from "react-icons/io";
 import { useState, useEffect } from 'react';
 import { motion as MOTION } from 'framer-motion';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // const images = [
 //     '/img/home3.png',
@@ -35,7 +35,7 @@ const fadeVariants = {
 
 export default function SubHeader() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const[currentIndexImage, setCurrentIndexImage] = useState(0);
+    const [currentIndexImage, setCurrentIndexImage] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -48,7 +48,7 @@ export default function SubHeader() {
                 setCurrentIndex((prevIndex) =>
                     prevIndex === images.length - 1 ? 0 : prevIndex + 1
                 );
-            },500)
+            }, 500)
         }, 7000);
         return () => clearInterval(interval);
     }, []);
@@ -80,14 +80,14 @@ export default function SubHeader() {
                             WebkitTextFillColor: 'transparent',
                         }}
 
-                    >Ads</span> in Seconds <br />
+                    >Video</span> in Seconds <br />
 
-                    <span 
-                    style={{
-                        background: `linear-gradient(to right, var(--light${currentColor[currentIndex]}), var(--${currentColor[currentIndex]}))`,
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent'
-                    }}
+                    <span
+                        style={{
+                            background: `linear-gradient(to right, var(--light${currentColor[currentIndex]}), var(--${currentColor[currentIndex]}))`,
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent'
+                        }}
                     >with AI</span>
                 </h1>
 
@@ -109,16 +109,18 @@ export default function SubHeader() {
                     <span>Get start</span>
                     <MOTION.div className="watch-demo-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Link to="/adsflow">
-                        <button>
-                            Watch Demo
-                        </button>
+                            <button>
+                                Watch Demo
+                            </button>
                         </Link>
                     </MOTION.div>
                     <span>or</span>
                     <MOTION.div className="try-for-free-button" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <button>
-                            Try For Free
-                        </button>
+                        <Link to="/adsflow">
+                            <button>
+                                Try For Free
+                            </button>
+                        </Link>
                     </MOTION.div>
                 </div>
             </MOTION.div>

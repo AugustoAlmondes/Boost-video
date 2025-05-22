@@ -88,7 +88,7 @@ export default function CreativeAnalysis() {
                             axisVisibility={{ x: false, y: false }}
                         />
                         <p className="section-subtitle-description">
-                            Your creative is performing better than 87% of ads in your industry.
+                            Your creative is performing better than 87% of video in your industry.
                         </p>
                     </CardContent>
                 </Card>

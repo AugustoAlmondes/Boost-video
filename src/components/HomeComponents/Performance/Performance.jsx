@@ -1,6 +1,7 @@
 import './performance.css';
 import { FaCheck } from "react-icons/fa";
 import { motion as MOTION } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 export default function PerformanceVideo() {
     return (
@@ -71,14 +72,16 @@ export default function PerformanceVideo() {
 
                     <h2>Ready to Optimize Your Ad Performance?</h2>
                     <p>
-                        Join thousands of creators and businesses using klike to improve their advertising results
+                        Join thousands of creators and businesses using Boost to improve their advertising results
                     </p>
                     <MOTION.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ type: "spring", stiffness: 300 }}
                     >
-                        Start Free Trial
+                        <Link to="/adsflow" style={{ color: 'white' }}>
+                            Start Free Trial
+                        </Link>
                     </MOTION.button>
                 </section>
             </div>

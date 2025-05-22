@@ -128,7 +128,7 @@ export default function CreativeAnalysis({ loadGraph }) {
                             </progress>
                             <p>
                                 Your creative is performing better than
-                                {` ${displayValue}% `}of ads in your industry
+                                {` ${displayValue}% `}of video in your industry
                             </p>
                         </div>
                     </MOTION.div>

@@ -62,7 +62,7 @@ export default function StepSuggestions() {
                                 <p style={{ fontSize: '1.2rem', fontWeight: '500', color: '#4b5563' }}>Video Information</p>
                                 <div className="video-meta">
                                     <h3>Original Duration: <span>0:45</span></h3>
-                                    <h3>File Name:  <span>ads.mp4</span></h3>
+                                    <h3>File Name:  <span>video.mp4</span></h3>
                                     <h3>Size: <span>4.2MB</span></h3>
                                     <h3>Type:<span> MP4</span></h3>
                                 </div>

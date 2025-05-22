@@ -17,7 +17,7 @@ export default function UseCasesSection() {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
             >
-                How klike can help you
+                How Boost can help you
             </MOTION.h1>
 
             <MOTION.p
@@ -27,7 +27,7 @@ export default function UseCasesSection() {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 viewport={{ once: true }}
             >
-                Turn your ads with artificial intelligence and increase the performance of your campaigns.
+                Turn your video with artificial intelligence and increase the performance of your campaigns.
             </MOTION.p>
 
             <div className="use-cases-grid">
@@ -69,7 +69,7 @@ export default function UseCasesSection() {
                     viewport={{ once: true }}>
                     <FaShoppingCart className="use-case-icon" />
                     <h4>E-commerce and brands</h4>
-                    <p>Understand what converts and focus your ads in what really brings result.</p>
+                    <p>Understand what converts and focus your video in what really brings result.</p>
                 </MOTION.div>
             </div>
 

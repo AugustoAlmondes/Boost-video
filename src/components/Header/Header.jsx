@@ -17,15 +17,14 @@ export default function Header() {
             <div className="logo-header exit">
                 <Link to="/"
                 style={{color: 'white'}}
-                >klike</Link>
-                {/* klike */}
+                >Boost</Link>
             </div>
 
             <div className={`menu-mobile-container ${menuAberto ? 'ativo' : ''}`}>
                 <div className="logo-header in">
                     <Link to="/"
                     style={{color: 'white'}}
-                    >klike</Link></div>
+                    >Boost</Link></div>
                 <nav className="options-header">
                     <ul>
                         <Link to="/" onClick={handleFecharMenu}

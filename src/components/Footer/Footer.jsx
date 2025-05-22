@@ -4,8 +4,8 @@ import { FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 export default function Footer() {
     return (
         <footer className="footer">
-            <h2 className="footer-title">klike.ai</h2>
-            <p className="footer-description">Raising your ads with intelligence and performance.</p>
+            <h2 className="footer-title">BoostVideo</h2>
+            <p className="footer-description">Raising your video with intelligence and performance.</p>
 
             <div className="footer-grid">
                 <div className="footer-column">

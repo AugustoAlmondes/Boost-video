@@ -1,6 +1,7 @@
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './testimony.css';
 import { motion as MOTION } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function Testimony() {
     const depoimentos = [
@@ -54,8 +55,10 @@ export default function Testimony() {
                     ))}
                 </div>
                 <div className="use-cases-cta">
-                    <h3>Start now creating ads that really work</h3>
-                    <button>Test for free </button>
+                    <h3>Start now creating video that really work</h3>
+                    <Link to="/adsflow">
+                        <button>Test for free </button>
+                    </Link>
                 </div>
             </section>
         </>
