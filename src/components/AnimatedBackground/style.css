@@ -20,16 +20,18 @@
     left: 0;
     margin: 0;
     padding: 0;
-    background: #dedede;
+    background: #d6d6d6;
     overflow: hidden;
+    /* animation: bgColorCycle 30s linear infinite; */
 }
+
 .background li {
     position: absolute;
     display: block;
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.5);
     animation: animate 19s linear infinite;
 }
 
@@ -105,4 +107,22 @@
     height: 160px;
     bottom: -160px;
     animation-delay: 20s;
+}
+
+@keyframes bgColorCycle {
+    0% {
+        background-color: var(--lightblue); /* Azul */
+    }
+    25% {
+        background-color: var(--lightgreen); /* Verde */
+    }
+    50% {
+        background-color: var(--lightyellow); /* Amarelo */
+    }
+    75% {
+        background-color: var(--lightred); /* Vermelho */
+    }
+    100% {
+        background-color: var(--lightblue); /* Volta pro Azul */
+    }
 }

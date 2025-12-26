@@ -1,4 +1,5 @@
 .footer {
+    z-index: 9999;
     animation: colorCycle 20s ease-in-out infinite;
     color: white;
     padding-top: 60px;

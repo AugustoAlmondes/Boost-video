@@ -1,20 +1,24 @@
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import HowWorks from "../../components/HowWorks/HowWorks";
-import Performance from "../../components/Performance/Performance";
-import SubHeader from "../../components/SubHeader/SubHeader";
-import Testimony from "../../components/Testimony/Testimony";
+import HowWorks from "../../components/HomeComponents/HowWorks/HowWorks";
+import Performance from "../../components/HomeComponents/Performance/Performance";
+import SubHeader from "../../components/HomeComponents/SubHeader/SubHeader";
+import Testimony from "../../components/HomeComponents/Testimony/Testimony";
+import UseCasesSection from "../../components/HomeComponents/UseCasesSection/UseCasesSection";
 
 import './home.css';
 
 export default function Home() {
-    return (
+    return (<>
+        <Header />
         <div className="home-container">
             <SubHeader />
+            <UseCasesSection />
             <HowWorks />
             <Performance />
             <Testimony />
             <Footer />
         </div>
+    </>
     );
 }

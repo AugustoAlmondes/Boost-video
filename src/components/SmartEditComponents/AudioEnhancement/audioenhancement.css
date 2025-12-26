@@ -1,0 +1,232 @@
+.audio-enhancement {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.audio-enhancement h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #696969;
+}
+
+.card-audio {
+    /* background-color: #f5f5f5; */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.card-content-audio {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #696969;
+    margin: 0;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+}
+
+.optional-text {
+    font-size: 12px;
+    color: #696969;
+    font-style: italic;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: var(--blue);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    width: fit-content;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+.card-audio-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon-text-audio {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid #B5B5B5; */
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    background-color: #E8E8E8;
+    color: black;
+    transition: .2s;
+}
+
+.icon-text-audio:hover {
+    transition: .2s;
+    background-color: var(--lightblue);
+    cursor: pointer;
+}
+
+.icon-text-audio svg {
+    color: #333;
+}
+
+/* Track styles */
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s;
+    border: 2px solid #ffffff;
+
+    &:hover {
+        background-color: #E8E8E8;
+        cursor: pointer;
+    }
+}
+
+.track.active {
+    border: 2px solid var(--blue);
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.track-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+}
+
+.track-desc {
+    font-size: 12px;
+    margin: 0;
+    color: #696969;
+}
+
+.track-percentage {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.icon-muted {
+    color: #696969;
+}
+
+/* Button styles */
+.outline-button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: var(--verylightyellow);
+}
+
+.outline-button:hover {
+    background-color: var(--lightyellow);
+}
+
+.outline-button.small {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.primary-button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    opacity: 0.9;
+}
+
+.ghost-button {
+    background: none;
+    border: none;
+    color: #696969;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px 12px;
+}
+
+.ghost-button:hover {
+    color: green;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Sound effects buttons */
+.sound-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-buttons button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: 500;
+}

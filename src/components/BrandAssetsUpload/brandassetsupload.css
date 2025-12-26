@@ -1,0 +1,54 @@
+.container-brand-assets {
+    width: 800px;
+    border: 2px solid rgb(232, 232, 232);
+    /* border-image: linear-gradient(to bottom, var(--lightred), var(--lightgreen)) 2; */
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 12px; */
+    border-radius: 12px;
+    min-width: 300px;
+
+    &.active{
+        border: 2px solid var(--lightblue);
+        box-shadow: 0 0 20px var(--verylightblue);
+    }
+}
+
+.brand-assets-upload div {
+    display: flex;
+    align-items: center;
+}
+
+.brand-assets-icon {
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: #CFCFCF;
+    border-radius: 6px;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.brand-assets-button {
+    background-color: #828282;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    height: 40px;
+    width: 150px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.brand-assets-icon.active,
+.brand-assets-button.active {
+    background-color: var(--blue);
+}
+
+.brand-assets-button:hover {
+    background-color: var(--darkblue);
+    cursor: pointer;
+}

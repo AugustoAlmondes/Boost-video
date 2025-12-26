@@ -1,0 +1,145 @@
+.creative-analysis-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.creative-analysis-title {
+    font-family: 'Avenir', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--darkblue);
+}
+
+.label-card-progress label {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+.creative-analysis-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #374151;
+}
+
+.section-title h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.pie-chart-card {
+    background: linear-gradient(to bottom right, var(--lightblue), var(--blue));
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+
+.section-subtitle-description {
+    margin: 0;
+    font-size: 25px;
+    font-family: var(--Avenir);
+    color: black;
+}
+
+.progress-group,
+.analysis-summary {
+    border: 2px solid rgb(232, 232, 232);
+
+    padding: 25px;
+    min-width: 400px;
+    border-radius: 10px;
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-group progress {
+    width: 300px;
+}
+
+.progress-group p {
+    margin-top: 15px;
+    font-size: 20px;
+    color: rgb(143, 143, 143);
+}
+
+.progress-group .label-card-progress h3 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.progress-group .label-card-progress label {
+    font-size: 20px;
+}
+
+.progress-group.exit {
+    margin-top: 20px;
+}
+
+.cards-performance-group {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analysis-summary {
+    margin-top: 20px;
+}
+
+.analysis-summary h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.analysis-summary ul {
+    list-style: none;
+    width: 100%;
+}
+
+.analysis-summary li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 18px;
+    color: #374151;
+    margin-left: 70px;
+    margin-bottom: 0.75rem;
+}
+
+.analysis-summary li svg {
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+}
+
+.analysis-summary .icon-success {
+    color: var(--green);
+}
+
+.analysis-summary .icon-info {
+    color: var(--blue);
+}
